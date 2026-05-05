@@ -13,11 +13,11 @@ MODELS=(
 )
 
 DATASETS=(
-  "GSE92742-SFT/Planner-SFT.jsonl GSE92742-SFT/Reranker-SFT.jsonl"
+  "/root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl"
 )
 
 OUTPUTS=(
-    "Model-Saves/Qwen3-1.7B-SFT-FullMixed"
+    "/root/dengjie/AI4SCI/Model-Saves/Qwen3-1.7B-SFT-Reranker-Full"
 )
 
 ############################
@@ -49,7 +49,7 @@ for ((i=0; i<NUM_EXP; i++)); do
   NPROC_PER_NODE=4 \
   swift sft \
       --model "${MODELS[$i]}" \
-      --tuner_type full \
+      --tuner_type lora \
       --dataset "${SRC_DATASET}" \
       --torch_dtype float16 \
       --num_train_epochs 1 \
