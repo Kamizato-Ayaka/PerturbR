@@ -129,8 +129,8 @@ def run_vllm_inference(model_path, prompts, tokenizer, temperature=0.0):
     """封装 vLLM 推理逻辑，方便内存释放"""
     print(f"Loading Model: {model_path} ...")
     # tensor_parallel_size 根据你的 GPU 数量调整
-    llm = LLM(model=model_path, trust_remote_code=True, tensor_parallel_size=1) 
-    sampling_params = SamplingParams(temperature=temperature, max_tokens=2048)
+    llm = LLM(model=model_path, trust_remote_code=True, tensor_parallel_size=4, dtype=torch.float16) 
+    sampling_params = SamplingParams(temperature=temperature, max_tokens=8196)
     
     # 格式化 Prompt
     formatted_prompts = [
@@ -156,9 +156,9 @@ def run_vllm_inference(model_path, prompts, tokenizer, temperature=0.0):
 # ==========================================
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--test-data", type=str, required=True, help="Path to test_cases.jsonl")
-    parser.add_argument("--planner-model", type=str, required=True, help="Path to Planner model")
-    parser.add_argument("--reranker-model", type=str, default="", help="Path to Reranker model (Leave empty if same as planner)")
+    parser.add_argument("--test-data", type=str, default="/root/dengjie/AI4SCI/PP-data/GSE92742-TEST/test_id.jsonl", help="Path to test_cases.jsonl")
+    parser.add_argument("--planner-model", type=str, default="/root/dengjie/AI4SCI/Model-Saves/Qwen3-4B-SFT-GSE92742-Mixed/v1-20260504-213156/checkpoint-1112", help="Path to Planner model")
+    parser.add_argument("--reranker-model", type=str, default="/root/dengjie/AI4SCI/Model-Saves/Qwen3-4B-SFT-GSE92742-Mixed/v1-20260504-213156/checkpoint-1112", help="Path to Reranker model (Leave empty if same as planner)")
     parser.add_argument("--block-size", type=int, default=125)
     parser.add_argument("--output", type=str, default="detailed_eval_results.json")
     args = parser.parse_args()
@@ -188,8 +188,8 @@ def main():
     if is_shared_model:
         print(">>> Using ONE shared model for all tasks. Optimizing load...")
         # 为了不反复清理显存，这里手写一个特殊的联合推理，把三种 prompt 拼在一起跑
-        llm = LLM(model=args.planner_model, trust_remote_code=True, tensor_parallel_size=1)
-        sampling_params = SamplingParams(temperature=0.0, max_tokens=2048)
+        llm = LLM(model=args.planner_model, trust_remote_code=True, tensor_parallel_size=4, dtype=torch.float16)
+        sampling_params = SamplingParams(temperature=0.0, max_tokens=8196)
         
         # 跑 Planner
         print("[Shared] Running Planner Inference...")

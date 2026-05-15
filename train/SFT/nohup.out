@@ -1,0 +1,1159 @@
+======================================
+Starting Experiment 0
+Model:   Qwen/Qwen3-0.6B
+Dataset: /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Planner-SFT.jsonl
+Output:  /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed
+======================================
+Traceback (most recent call last):
+  File "/opt/conda/bin/swift", line 5, in <module>
+    from swift.cli.main import cli_main
+  File "/opt/conda/lib/python3.8/site-packages/swift/__init__.py", line 4, in <module>
+    from .utils.import_utils import _LazyModule
+  File "/opt/conda/lib/python3.8/site-packages/swift/utils/__init__.py", line 3, in <module>
+    from .env import (get_dist_setting, get_pai_tensorboard_dir, is_deepspeed_enabled, is_dist, is_dist_ta, is_local_master,
+  File "/opt/conda/lib/python3.8/site-packages/swift/utils/env.py", line 9, in <module>
+    from .logger import get_logger
+  File "/opt/conda/lib/python3.8/site-packages/swift/utils/logger.py", line 8, in <module>
+    from modelscope.utils.logger import get_logger as get_ms_logger
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/__init__.py", line 5, in <module>
+    from modelscope.utils.import_utils import (LazyImportModule,
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/import_utils.py", line 18, in <module>
+    from modelscope.utils.ast_utils import (INDEX_KEY, MODULE_KEY, REQUIREMENT_KEY,
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/ast_utils.py", line 24, in <module>
+    from modelscope.utils.registry import default_group
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/registry.py", line 11, in <module>
+    logger = get_logger()
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/logger.py", line 49, in get_logger
+    from modelscope.utils.torch_utils import is_dist, is_master
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/torch_utils.py", line 413, in <module>
+    heads: list[int], n_heads: int, head_size: int,
+TypeError: 'type' object is not subscriptable
+======================================
+Starting Experiment 0
+Model:   Qwen/Qwen3-0.6B
+Dataset: /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Planner-SFT.jsonl
+Output:  /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed
+======================================
+Traceback (most recent call last):
+  File "/opt/conda/bin/swift", line 5, in <module>
+    from swift.cli.main import cli_main
+  File "/opt/conda/lib/python3.8/site-packages/swift/__init__.py", line 4, in <module>
+    from .utils.import_utils import _LazyModule
+  File "/opt/conda/lib/python3.8/site-packages/swift/utils/__init__.py", line 3, in <module>
+    from .env import (get_dist_setting, get_pai_tensorboard_dir, is_deepspeed_enabled, is_dist, is_dist_ta, is_local_master,
+  File "/opt/conda/lib/python3.8/site-packages/swift/utils/env.py", line 9, in <module>
+    from .logger import get_logger
+  File "/opt/conda/lib/python3.8/site-packages/swift/utils/logger.py", line 8, in <module>
+    from modelscope.utils.logger import get_logger as get_ms_logger
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/__init__.py", line 5, in <module>
+    from modelscope.utils.import_utils import (LazyImportModule,
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/import_utils.py", line 18, in <module>
+    from modelscope.utils.ast_utils import (INDEX_KEY, MODULE_KEY, REQUIREMENT_KEY,
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/ast_utils.py", line 24, in <module>
+    from modelscope.utils.registry import default_group
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/registry.py", line 11, in <module>
+    logger = get_logger()
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/logger.py", line 49, in get_logger
+    from modelscope.utils.torch_utils import is_dist, is_master
+  File "/opt/conda/lib/python3.8/site-packages/modelscope/utils/torch_utils.py", line 413, in <module>
+    heads: list[int], n_heads: int, head_size: int,
+TypeError: 'type' object is not subscriptable
+======================================
+Starting Experiment 0
+Model:   Qwen/Qwen3-0.6B
+Dataset: /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Planner-SFT.jsonl
+Output:  /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed
+======================================
+run sh: `/opt/conda/envs/qwen3/bin/python3.10 -m torch.distributed.run --nproc_per_node 4 /opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/cli/sft.py --model Qwen/Qwen3-0.6B --tuner_type full --dataset /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Planner-SFT.jsonl --torch_dtype float16 --num_train_epochs 1 --per_device_train_batch_size 1 --learning_rate 2e-5 --gradient_accumulation_steps 32 --save_total_limit 3 --deepspeed zero2 --logging_steps 5 --save_only_model true --output_dir /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed --warmup_ratio 0.05 --dataset_num_proc 64`
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[INFO:swift] Successfully registered `/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/dataset/data/dataset_info.json`.
+[INFO:swift] rank: 0, local_rank: 0, world_size: 4, local_world_size: 4
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+`torch_dtype` is deprecated! Use `dtype` instead!
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+`torch_dtype` is deprecated! Use `dtype` instead!
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+`torch_dtype` is deprecated! Use `dtype` instead!
+[INFO:swift] Downloading the model from ModelScope Hub, model_id: Qwen/Qwen3-0.6B
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+[INFO:modelscope] Target directory already exists, skipping creation.
+[INFO:swift] Loading the model using model_dir: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0___6B
+`torch_dtype` is deprecated! Use `dtype` instead!
+[INFO:swift] Setting args.lazy_tokenize: False
+[INFO:swift] Using deepspeed: {'fp16': {'enabled': 'auto', 'loss_scale': 0, 'loss_scale_window': 1000, 'initial_scale_power': 16, 'hysteresis': 2, 'min_loss_scale': 1}, 'bf16': {'enabled': 'auto'}, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'none', 'pin_memory': True}, 'allgather_partitions': True, 'allgather_bucket_size': 200000000.0, 'overlap_comm': False, 'reduce_scatter': True, 'reduce_bucket_size': 200000000.0, 'contiguous_gradients': True}, 'gradient_accumulation_steps': 'auto', 'gradient_clipping': 'auto', 'steps_per_print': 2000, 'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'wall_clock_breakdown': False}
+[INFO:swift] Setting args.dataloader_num_workers: 1
+[INFO:swift] output_dir: /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v0-20260512-101302
+[INFO:swift] args: SftArguments(
+_n_gpu=-1,
+acc_strategy=token,
+accelerator_config={'dispatch_batches': False},
+adafactor=False,
+adalora_beta1=0.85,
+adalora_beta2=0.85,
+adalora_deltaT=1,
+adalora_init_r=12,
+adalora_orth_reg_weight=0.5,
+adalora_target_r=8,
+adalora_tfinal=0,
+adalora_tinit=0,
+adam_beta1=0.9,
+adam_beta2=0.95,
+adam_epsilon=1e-08,
+adapter_act=gelu,
+adapter_length=128,
+adapters=[],
+add_non_thinking_prefix=True,
+add_version=True,
+agent_template=None,
+aligner_lr=None,
+attn_impl=None,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+bnb_4bit_compute_dtype=torch.float32,
+bnb_4bit_quant_storage=None,
+bnb_4bit_quant_type=nf4,
+bnb_4bit_use_double_quant=True,
+boft_block_num=0,
+boft_block_size=4,
+boft_dropout=0.0,
+boft_n_butterfly_factor=1,
+cached_dataset=[],
+cached_val_dataset=[],
+callbacks=[],
+check_model=True,
+columns={},
+create_checkpoint_symlink=False,
+custom_dataset_info=[],
+custom_register_path=[],
+data_seed=42,
+dataloader_drop_last=False,
+dataloader_num_workers=None,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+dataset=['/root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Planner-SFT.jsonl'],
+dataset_num_proc=64,
+dataset_shuffle=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=18000000,
+debug=None,
+deepspeed={'fp16': {'enabled': 'auto', 'loss_scale': 0, 'loss_scale_window': 1000, 'initial_scale_power': 16, 'hysteresis': 2, 'min_loss_scale': 1}, 'bf16': {'enabled': 'auto'}, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'none', 'pin_memory': True}, 'allgather_partitions': True, 'allgather_bucket_size': 200000000.0, 'overlap_comm': False, 'reduce_scatter': True, 'reduce_bucket_size': 200000000.0, 'contiguous_gradients': True}, 'gradient_accumulation_steps': 'auto', 'gradient_clipping': 'auto', 'steps_per_print': 2000, 'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'wall_clock_breakdown': False},
+deepspeed_autotp_size=None,
+device_groups=None,
+device_map=None,
+disable_tqdm=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+download_mode=reuse_dataset_if_exists,
+ds3_gather_for_generation=True,
+early_stop_interval=None,
+enable_channel_loss=False,
+enable_dft_loss=False,
+enable_thinking=None,
+eval_accumulation_steps=None,
+eval_dataset=[],
+eval_dataset_args=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_generation_config=None,
+eval_limit=None,
+eval_metric=None,
+eval_on_start=False,
+eval_steps=500,
+eval_strategy=no,
+eval_use_evalscope=False,
+eval_use_gather_object=False,
+experts_impl=None,
+external_plugins=[],
+extra_eval_args=None,
+fourier_n_frequency=2000,
+fourier_scaling=300.0,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+freeze_aligner=True,
+freeze_llm=False,
+freeze_parameters=[],
+freeze_parameters_ratio=0.0,
+freeze_parameters_regex=None,
+freeze_vit=True,
+fsdp=[],
+fsdp_config=None,
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+galore_cos_threshold=0.4,
+galore_gamma_proj=2,
+galore_optim_per_parameter=False,
+galore_proj_bits=4,
+galore_proj_group_size=256,
+galore_proj_quant=False,
+galore_proj_type=std,
+galore_quantization=False,
+galore_queue_size=5,
+galore_rank=128,
+galore_scale=1.0,
+galore_target_modules=None,
+galore_update_proj_gap=50,
+galore_with_embedding=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=32,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hqq_axis=None,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_args_error=False,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+init_strategy=None,
+init_weights=True,
+interleave_prob=None,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+lazy_tokenize=False,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+lisa_activated_layers=0,
+lisa_step_interval=20,
+llamapro_num_groups=None,
+llamapro_num_new_blocks=4,
+load_args=False,
+load_best_model_at_end=False,
+load_data_args=False,
+load_from_cache_file=False,
+local_rank=0,
+local_repo_path=None,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v0-20260512-101302/runs,
+logging_first_step=True,
+logging_nan_inf_filter=True,
+logging_steps=5,
+logging_strategy=steps,
+logprobs=False,
+lora_alpha=32,
+lora_bias=none,
+lora_dropout=0.05,
+lora_dtype=None,
+lora_ga_batch_size=2,
+lora_ga_direction=ArB2r,
+lora_ga_iters=2,
+lora_ga_max_length=1024,
+lora_ga_scale=stable,
+lora_ga_stable_gamma=16,
+lora_rank=8,
+lorap_lr_ratio=None,
+loss_scale=default,
+loss_type=None,
+lr_scheduler_kwargs=None,
+lr_scheduler_type=cosine,
+max_epochs=None,
+max_grad_norm=1.0,
+max_length=40960,
+max_memory={},
+max_model_len=None,
+max_new_tokens=64,
+max_pixels=None,
+max_shard_size=5GB,
+max_steps=-1,
+metric_for_best_model=loss,
+model=Qwen/Qwen3-0.6B,
+model_author=None,
+model_kwargs={},
+model_name=None,
+model_revision=None,
+model_type=qwen3,
+modules_to_save=[],
+mp_parameters=,
+neftune_noise_alpha=None,
+new_special_tokens=[],
+no_cuda=False,
+norm_bbox=None,
+num_beams=1,
+num_labels=None,
+num_train_epochs=1.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+optimizer=None,
+output_dir=/root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v0-20260512-101302,
+overwrite_output_dir=False,
+packing=False,
+packing_length=None,
+packing_num_proc=1,
+padding_free=False,
+padding_side=right,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+predict_with_generate=False,
+prediction_loss_only=False,
+problem_type=None,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+quant_bits=None,
+quant_method=None,
+ray_exp_name=None,
+ray_scope=last,
+reft_args=None,
+reft_intervention_type=LoreftIntervention,
+reft_layer_key=None,
+reft_layers=None,
+reft_rank=4,
+remove_unused_columns=True,
+repetition_penalty=None,
+report_to=['tensorboard'],
+response_prefix=None,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+resume_only_model=False,
+rope_scaling=None,
+router_aux_loss_coef=0.0,
+run_name=/root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v0-20260512-101302,
+safe_serialization=True,
+save_on_each_node=False,
+save_only_model=True,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=3,
+seed=42,
+sequence_parallel_size=1,
+shuffle_buffer_size=1000,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_dataset_ratio=0.0,
+stop_words=[],
+stopping_strategy=first_exhausted,
+stream=False,
+streaming=False,
+strict=False,
+structured_outputs_regex=None,
+swanlab_email_language=zh,
+swanlab_exp_name=None,
+swanlab_mode=cloud,
+swanlab_notification_method=None,
+swanlab_project=ms-swift,
+swanlab_receiver_email=None,
+swanlab_secret=None,
+swanlab_sender_email=None,
+swanlab_smtp_port=None,
+swanlab_smtp_server=None,
+swanlab_token=<SWANLAB_TOKEN>,
+swanlab_webhook_url=None,
+swanlab_workspace=None,
+system=None,
+target_modules=['all-linear'],
+target_parameters=None,
+target_regex=None,
+task_type=causal_lm,
+temperature=0.0,
+template=qwen3,
+template_backend=swift,
+tf32=None,
+top_k=None,
+top_logprobs=None,
+top_p=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_dtype=torch.float16,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+train_dataloader_shuffle=True,
+trainable_parameters=[],
+trainable_parameters_regex=None,
+truncation_strategy=delete,
+tuner_backend=peft,
+tuner_type=full,
+use_chat_template=True,
+use_cpu=False,
+use_dora=False,
+use_flash_ckpt=False,
+use_galore=False,
+use_hf=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_logits_to_keep=None,
+use_mps_device=False,
+use_ray=False,
+use_rslora=False,
+use_swift_lora=False,
+val_dataset=[],
+val_dataset_shuffle=False,
+vera_d_initial=0.1,
+vera_dropout=0.0,
+vera_projection_prng_key=0,
+vera_rank=256,
+vit_gradient_checkpointing=False,
+vit_lr=None,
+warmup_ratio=0.05,
+warmup_steps=0,
+weight_decay=0.1,
+zero_hpz_partition_size=None,
+)
+[INFO:swift] Global seed set to 42
+[INFO:swift] Downloading the model from ModelScope Hub, model_id: Qwen/Qwen3-0.6B
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+[INFO:modelscope] Target directory already exists, skipping creation.
+[INFO:swift] Loading the model using model_dir: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0___6B
+[INFO:swift] model_kwargs: {'device_map': 'cuda:0', 'dtype': torch.float16}
+[INFO:swift] model.hf_device_map: {'': device(type='cuda', index=0)}
+[INFO:swift] model_info: ModelInfo(model_type='qwen3', model_dir='/root/.cache/modelscope/hub/models/Qwen/Qwen3-0___6B', torch_dtype=torch.float16, max_model_len=40960, quant_method=None, quant_bits=None, rope_scaling=None, is_moe_model=False, is_multimodal=False, config=Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "float16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 40960,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "4.57.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+, task_type='causal_lm', num_labels=None)
+[INFO:swift] model.generation_config: GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "max_new_tokens": 64,
+  "pad_token_id": 151643
+}
+
+[INFO:swift] default_system: None
+[INFO:swift] max_length: 40960
+[INFO:swift] response_prefix: ''
+[INFO:swift] agent_template: hermes
+[INFO:swift] Start time of running main: 2026-05-12 10:13:07.300473
+[INFO:swift] swift.__version__: 4.1.3
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/cli/sft.py", line 20, in <module>
+[rank0]:     sft_main()
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/train/sft.py", line 354, in sft_main
+[rank0]:     return SwiftSft(args).main()
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/base.py", line 52, in main
+[rank0]:     result = self.run()
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/ray/base.py", line 168, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/train/sft.py", line 174, in run
+[rank0]:     train_dataset, val_dataset = self._prepare_dataset()
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/ray/base.py", line 168, in wrapper
+[rank0]:     return func(self, *args, **kwargs)
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/train/sft.py", line 120, in _prepare_dataset
+[rank0]:     train_dataset, val_dataset = self._get_dataset()
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/train/sft.py", line 84, in _get_dataset
+[rank0]:     train_dataset, val_dataset = load_dataset(
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/dataset/loader.py", line 327, in load_dataset
+[rank0]:     train_dataset = loader.load(dataset_syntax, dataset_meta, use_hf=use_hf)
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/dataset/loader.py", line 168, in load
+[rank0]:     dataset = self._load_repo_dataset(
+[rank0]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/dataset/loader.py", line 84, in _load_repo_dataset
+[rank0]:     raise ValueError(f'The local path does not exist, dataset_id: `{dataset_id}`. '
+[rank0]: ValueError: The local path does not exist, dataset_id: `/root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Planner-SFT.jsonl`. os.path.exists(dataset_id): False
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+[rank0]:[W512 10:13:07.248678666 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/cli/sft.py", line 20, in <module>
+[rank1]:     sft_main()
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/train/sft.py", line 354, in sft_main
+[rank1]:     return SwiftSft(args).main()
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/base.py", line 52, in main
+[rank1]:     result = self.run()
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/ray/base.py", line 168, in wrapper
+[rank1]:     return func(self, *args, **kwargs)
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/train/sft.py", line 174, in run
+[rank1]:     train_dataset, val_dataset = self._prepare_dataset()
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/ray/base.py", line 168, in wrapper
+[rank1]:     return func(self, *args, **kwargs)
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/train/sft.py", line 120, in _prepare_dataset
+[rank1]:     train_dataset, val_dataset = self._get_dataset()
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/pipelines/train/sft.py", line 84, in _get_dataset
+[rank1]:     train_dataset, val_dataset = load_dataset(
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/dataset/loader.py", line 327, in load_dataset
+[rank1]:     train_dataset = loader.load(dataset_syntax, dataset_meta, use_hf=use_hf)
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/dataset/loader.py", line 168, in load
+[rank1]:     dataset = self._load_repo_dataset(
+[rank1]:   File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/dataset/loader.py", line 84, in _load_repo_dataset
+[rank1]:     raise ValueError(f'The local path does not exist, dataset_id: `{dataset_id}`. '
+[rank1]: ValueError: The local path does not exist, dataset_id: `/root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Planner-SFT.jsonl`. os.path.exists(dataset_id): False
+W0512 10:13:09.279000 42802 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 42873 closing signal SIGTERM
+W0512 10:13:09.281000 42802 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 42874 closing signal SIGTERM
+W0512 10:13:09.282000 42802 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 42875 closing signal SIGTERM
+E0512 10:13:09.627000 42802 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 42872) of binary: /opt/conda/envs/qwen3/bin/python3.10
+Traceback (most recent call last):
+  File "/opt/conda/envs/qwen3/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/opt/conda/envs/qwen3/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/opt/conda/envs/qwen3/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/cli/sft.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-05-12_10:13:09
+  host      : 24dae4b38dc4
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 42872)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+======================================
+Starting Experiment 0
+Model:   Qwen/Qwen3-0.6B
+Dataset: /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Mixed-Planner-Reranker-SFT.jsonl
+Output:  /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed
+======================================
+run sh: `/opt/conda/envs/qwen3/bin/python3.10 -m torch.distributed.run --nproc_per_node 4 /opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/cli/sft.py --model Qwen/Qwen3-0.6B --tuner_type full --dataset /root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Mixed-Planner-Reranker-SFT.jsonl --torch_dtype float16 --num_train_epochs 1 --per_device_train_batch_size 1 --learning_rate 2e-5 --gradient_accumulation_steps 32 --save_total_limit 3 --deepspeed zero2 --logging_steps 5 --save_only_model true --output_dir /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed --warmup_ratio 0.05 --dataset_num_proc 64`
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[INFO:swift] Successfully registered `/opt/conda/envs/qwen3/lib/python3.10/site-packages/swift/dataset/data/dataset_info.json`.
+[INFO:swift] rank: 0, local_rank: 0, world_size: 4, local_world_size: 4
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+`torch_dtype` is deprecated! Use `dtype` instead!
+[INFO:swift] Downloading the model from ModelScope Hub, model_id: Qwen/Qwen3-0.6B
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+[INFO:modelscope] Target directory already exists, skipping creation.
+[INFO:swift] Loading the model using model_dir: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0___6B
+`torch_dtype` is deprecated! Use `dtype` instead!
+[INFO:swift] Setting args.lazy_tokenize: False
+[INFO:swift] Using deepspeed: {'fp16': {'enabled': 'auto', 'loss_scale': 0, 'loss_scale_window': 1000, 'initial_scale_power': 16, 'hysteresis': 2, 'min_loss_scale': 1}, 'bf16': {'enabled': 'auto'}, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'none', 'pin_memory': True}, 'allgather_partitions': True, 'allgather_bucket_size': 200000000.0, 'overlap_comm': False, 'reduce_scatter': True, 'reduce_bucket_size': 200000000.0, 'contiguous_gradients': True}, 'gradient_accumulation_steps': 'auto', 'gradient_clipping': 'auto', 'steps_per_print': 2000, 'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'wall_clock_breakdown': False}
+[INFO:swift] Setting args.dataloader_num_workers: 1
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+`torch_dtype` is deprecated! Use `dtype` instead!
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+`torch_dtype` is deprecated! Use `dtype` instead!
+[INFO:swift] output_dir: /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v1-20260512-101448
+[INFO:swift] args: SftArguments(
+_n_gpu=-1,
+acc_strategy=token,
+accelerator_config={'dispatch_batches': False},
+adafactor=False,
+adalora_beta1=0.85,
+adalora_beta2=0.85,
+adalora_deltaT=1,
+adalora_init_r=12,
+adalora_orth_reg_weight=0.5,
+adalora_target_r=8,
+adalora_tfinal=0,
+adalora_tinit=0,
+adam_beta1=0.9,
+adam_beta2=0.95,
+adam_epsilon=1e-08,
+adapter_act=gelu,
+adapter_length=128,
+adapters=[],
+add_non_thinking_prefix=True,
+add_version=True,
+agent_template=None,
+aligner_lr=None,
+attn_impl=None,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+bnb_4bit_compute_dtype=torch.float32,
+bnb_4bit_quant_storage=None,
+bnb_4bit_quant_type=nf4,
+bnb_4bit_use_double_quant=True,
+boft_block_num=0,
+boft_block_size=4,
+boft_dropout=0.0,
+boft_n_butterfly_factor=1,
+cached_dataset=[],
+cached_val_dataset=[],
+callbacks=[],
+check_model=True,
+columns={},
+create_checkpoint_symlink=False,
+custom_dataset_info=[],
+custom_register_path=[],
+data_seed=42,
+dataloader_drop_last=False,
+dataloader_num_workers=None,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+dataset=['/root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Mixed-Planner-Reranker-SFT.jsonl'],
+dataset_num_proc=64,
+dataset_shuffle=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=18000000,
+debug=None,
+deepspeed={'fp16': {'enabled': 'auto', 'loss_scale': 0, 'loss_scale_window': 1000, 'initial_scale_power': 16, 'hysteresis': 2, 'min_loss_scale': 1}, 'bf16': {'enabled': 'auto'}, 'zero_optimization': {'stage': 2, 'offload_optimizer': {'device': 'none', 'pin_memory': True}, 'allgather_partitions': True, 'allgather_bucket_size': 200000000.0, 'overlap_comm': False, 'reduce_scatter': True, 'reduce_bucket_size': 200000000.0, 'contiguous_gradients': True}, 'gradient_accumulation_steps': 'auto', 'gradient_clipping': 'auto', 'steps_per_print': 2000, 'train_batch_size': 'auto', 'train_micro_batch_size_per_gpu': 'auto', 'wall_clock_breakdown': False},
+deepspeed_autotp_size=None,
+device_groups=None,
+device_map=None,
+disable_tqdm=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+download_mode=reuse_dataset_if_exists,
+ds3_gather_for_generation=True,
+early_stop_interval=None,
+enable_channel_loss=False,
+enable_dft_loss=False,
+enable_thinking=None,
+eval_accumulation_steps=None,
+eval_dataset=[],
+eval_dataset_args=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_generation_config=None,
+eval_limit=None,
+eval_metric=None,
+eval_on_start=False,
+eval_steps=500,
+eval_strategy=no,
+eval_use_evalscope=False,
+eval_use_gather_object=False,
+experts_impl=None,
+external_plugins=[],
+extra_eval_args=None,
+fourier_n_frequency=2000,
+fourier_scaling=300.0,
+fp16=True,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+freeze_aligner=True,
+freeze_llm=False,
+freeze_parameters=[],
+freeze_parameters_ratio=0.0,
+freeze_parameters_regex=None,
+freeze_vit=True,
+fsdp=[],
+fsdp_config=None,
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+galore_cos_threshold=0.4,
+galore_gamma_proj=2,
+galore_optim_per_parameter=False,
+galore_proj_bits=4,
+galore_proj_group_size=256,
+galore_proj_quant=False,
+galore_proj_type=std,
+galore_quantization=False,
+galore_queue_size=5,
+galore_rank=128,
+galore_scale=1.0,
+galore_target_modules=None,
+galore_update_proj_gap=50,
+galore_with_embedding=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=32,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=False,
+group_by_length=False,
+half_precision_backend=auto,
+hqq_axis=None,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_args_error=False,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+init_strategy=None,
+init_weights=True,
+interleave_prob=None,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+lazy_tokenize=False,
+learning_rate=2e-05,
+length_column_name=length,
+liger_kernel_config=None,
+lisa_activated_layers=0,
+lisa_step_interval=20,
+llamapro_num_groups=None,
+llamapro_num_new_blocks=4,
+load_args=False,
+load_best_model_at_end=False,
+load_data_args=False,
+load_from_cache_file=False,
+local_rank=0,
+local_repo_path=None,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v1-20260512-101448/runs,
+logging_first_step=True,
+logging_nan_inf_filter=True,
+logging_steps=5,
+logging_strategy=steps,
+logprobs=False,
+lora_alpha=32,
+lora_bias=none,
+lora_dropout=0.05,
+lora_dtype=None,
+lora_ga_batch_size=2,
+lora_ga_direction=ArB2r,
+lora_ga_iters=2,
+lora_ga_max_length=1024,
+lora_ga_scale=stable,
+lora_ga_stable_gamma=16,
+lora_rank=8,
+lorap_lr_ratio=None,
+loss_scale=default,
+loss_type=None,
+lr_scheduler_kwargs=None,
+lr_scheduler_type=cosine,
+max_epochs=None,
+max_grad_norm=1.0,
+max_length=40960,
+max_memory={},
+max_model_len=None,
+max_new_tokens=64,
+max_pixels=None,
+max_shard_size=5GB,
+max_steps=-1,
+metric_for_best_model=loss,
+model=Qwen/Qwen3-0.6B,
+model_author=None,
+model_kwargs={},
+model_name=None,
+model_revision=None,
+model_type=qwen3,
+modules_to_save=[],
+mp_parameters=,
+neftune_noise_alpha=None,
+new_special_tokens=[],
+no_cuda=False,
+norm_bbox=None,
+num_beams=1,
+num_labels=None,
+num_train_epochs=1.0,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+optimizer=None,
+output_dir=/root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v1-20260512-101448,
+overwrite_output_dir=False,
+packing=False,
+packing_length=None,
+packing_num_proc=1,
+padding_free=False,
+padding_side=right,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+predict_with_generate=False,
+prediction_loss_only=False,
+problem_type=None,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+quant_bits=None,
+quant_method=None,
+ray_exp_name=None,
+ray_scope=last,
+reft_args=None,
+reft_intervention_type=LoreftIntervention,
+reft_layer_key=None,
+reft_layers=None,
+reft_rank=4,
+remove_unused_columns=True,
+repetition_penalty=None,
+report_to=['tensorboard'],
+response_prefix=None,
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+resume_only_model=False,
+rope_scaling=None,
+router_aux_loss_coef=0.0,
+run_name=/root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v1-20260512-101448,
+safe_serialization=True,
+save_on_each_node=False,
+save_only_model=True,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=3,
+seed=42,
+sequence_parallel_size=1,
+shuffle_buffer_size=1000,
+skip_memory_metrics=True,
+sortish_sampler=False,
+split_dataset_ratio=0.0,
+stop_words=[],
+stopping_strategy=first_exhausted,
+stream=False,
+streaming=False,
+strict=False,
+structured_outputs_regex=None,
+swanlab_email_language=zh,
+swanlab_exp_name=None,
+swanlab_mode=cloud,
+swanlab_notification_method=None,
+swanlab_project=ms-swift,
+swanlab_receiver_email=None,
+swanlab_secret=None,
+swanlab_sender_email=None,
+swanlab_smtp_port=None,
+swanlab_smtp_server=None,
+swanlab_token=<SWANLAB_TOKEN>,
+swanlab_webhook_url=None,
+swanlab_workspace=None,
+system=None,
+target_modules=['all-linear'],
+target_parameters=None,
+target_regex=None,
+task_type=causal_lm,
+temperature=0.0,
+template=qwen3,
+template_backend=swift,
+tf32=None,
+top_k=None,
+top_logprobs=None,
+top_p=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_dtype=torch.float16,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+train_dataloader_shuffle=True,
+trainable_parameters=[],
+trainable_parameters_regex=None,
+truncation_strategy=delete,
+tuner_backend=peft,
+tuner_type=full,
+use_chat_template=True,
+use_cpu=False,
+use_dora=False,
+use_flash_ckpt=False,
+use_galore=False,
+use_hf=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_logits_to_keep=None,
+use_mps_device=False,
+use_ray=False,
+use_rslora=False,
+use_swift_lora=False,
+val_dataset=[],
+val_dataset_shuffle=False,
+vera_d_initial=0.1,
+vera_dropout=0.0,
+vera_projection_prng_key=0,
+vera_rank=256,
+vit_gradient_checkpointing=False,
+vit_lr=None,
+warmup_ratio=0.05,
+warmup_steps=0,
+weight_decay=0.1,
+zero_hpz_partition_size=None,
+)
+[INFO:swift] Global seed set to 42
+[INFO:swift] Downloading the model from ModelScope Hub, model_id: Qwen/Qwen3-0.6B
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+[INFO:modelscope] Target directory already exists, skipping creation.
+[INFO:swift] Loading the model using model_dir: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0___6B
+[INFO:swift] model_kwargs: {'device_map': 'cuda:0', 'dtype': torch.float16}
+[INFO:swift] model.hf_device_map: {'': device(type='cuda', index=0)}
+[INFO:swift] model_info: ModelInfo(model_type='qwen3', model_dir='/root/.cache/modelscope/hub/models/Qwen/Qwen3-0___6B', torch_dtype=torch.float16, max_model_len=40960, quant_method=None, quant_bits=None, rope_scaling=None, is_moe_model=False, is_multimodal=False, config=Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "dtype": "float16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 40960,
+  "max_window_layers": 28,
+  "model_type": "qwen3",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 8,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": true,
+  "transformers_version": "4.57.0",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151936
+}
+, task_type='causal_lm', num_labels=None)
+[INFO:swift] model.generation_config: GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "max_new_tokens": 64,
+  "pad_token_id": 151643
+}
+
+[INFO:swift] default_system: None
+[INFO:swift] max_length: 40960
+[INFO:swift] response_prefix: ''
+[INFO:swift] agent_template: hermes
+[INFO:swift] Start time of running main: 2026-05-12 10:14:56.898437
+[INFO:swift] swift.__version__: 4.1.3
+Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+Setting num_proc from 64 back to 1 for the train split to disable multiprocessing as it only contains one shard.
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 1652 examples [00:00, 11941.59 examples/s]Generating train split: 3304 examples [00:00, 12793.38 examples/s]Generating train split: 4958 examples [00:00, 13357.75 examples/s]Generating train split: 6610 examples [00:00, 13623.08 examples/s]Generating train split: 8262 examples [00:00, 13757.05 examples/s]Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+Generating train split: 9915 examples [00:00, 13825.14 examples/s]Generating train split: 11567 examples [00:00, 13884.23 examples/s]Generating train split: 13220 examples [00:00, 13421.22 examples/s]Generating train split: 14874 examples [00:01, 12666.07 examples/s]Generating train split: 16526 examples [00:01, 12863.51 examples/s]Generating train split: 18178 examples [00:01, 13088.27 examples/s]Generating train split: 19830 examples [00:01, 13251.94 examples/s]Generating train split: 21482 examples [00:01, 13395.20 examples/s]Downloading Model from https://www.modelscope.cn to directory: /root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B
+Generating train split: 23134 examples [00:01, 13470.58 examples/s]Generating train split: 24786 examples [00:01, 13656.66 examples/s]Generating train split: 26438 examples [00:01, 13756.66 examples/s]Generating train split: 28090 examples [00:02, 13711.23 examples/s]Generating train split: 29742 examples [00:02, 13071.30 examples/s]Generating train split: 31392 examples [00:02, 13107.06 examples/s]Generating train split: 33042 examples [00:02, 12820.48 examples/s]Generating train split: 34692 examples [00:02, 12962.09 examples/s]Generating train split: 36342 examples [00:02, 12999.53 examples/s]Generating train split: 37992 examples [00:02, 13135.81 examples/s]Generating train split: 39642 examples [00:02, 13248.03 examples/s]Generating train split: 41290 examples [00:03, 13341.93 examples/s]Generating train split: 42939 examples [00:03, 13253.34 examples/s]Generating train split: 44587 examples [00:03, 13361.02 examples/s]Generating train split: 46238 examples [00:03, 13490.35 examples/s]Generating train split: 47887 examples [00:03, 13582.10 examples/s]Generating train split: 49538 examples [00:03, 13620.04 examples/s]Generating train split: 51188 examples [00:03, 13640.41 examples/s]Generating train split: 52839 examples [00:03, 13688.58 examples/s]Generating train split: 54489 examples [00:04, 13739.28 examples/s]Generating train split: 56140 examples [00:04, 13571.21 examples/s]Generating train split: 57790 examples [00:04, 13606.45 examples/s]Generating train split: 59440 examples [00:04, 13686.64 examples/s]Generating train split: 61090 examples [00:04, 13720.64 examples/s]Generating train split: 62740 examples [00:04, 13523.01 examples/s]Generating train split: 64390 examples [00:04, 13273.14 examples/s]Generating train split: 66041 examples [00:04, 13361.87 examples/s]Generating train split: 67692 examples [00:05, 13518.18 examples/s]Generating train split: 69343 examples [00:05, 13604.80 examples/s]Generating train split: 70992 examples [00:05, 13677.54 examples/s]Generating train split: 72648 examples [00:05, 13689.11 examples/s]Generating train split: 74304 examples [00:05, 13727.92 examples/s]Generating train split: 75962 examples [00:05, 13750.89 examples/s]Generating train split: 77619 examples [00:05, 13685.33 examples/s]Generating train split: 79275 examples [00:05, 13419.53 examples/s]Generating train split: 80932 examples [00:06, 12945.92 examples/s]Generating train split: 82589 examples [00:06, 12857.46 examples/s]Generating train split: 84246 examples [00:06, 13124.08 examples/s]Generating train split: 85904 examples [00:06, 13317.93 examples/s]Generating train split: 87560 examples [00:06, 13452.00 examples/s]Generating train split: 89216 examples [00:06, 13525.01 examples/s]Generating train split: 90872 examples [00:06, 13313.21 examples/s]Generating train split: 92528 examples [00:06, 13195.02 examples/s]Generating train split: 94184 examples [00:07, 13196.74 examples/s]Generating train split: 95840 examples [00:07, 12998.38 examples/s]Generating train split: 97496 examples [00:07, 12785.95 examples/s]Generating train split: 99152 examples [00:07, 12861.54 examples/s]Generating train split: 100810 examples [00:07, 13121.34 examples/s]Generating train split: 102464 examples [00:07, 13268.58 examples/s]Generating train split: 104118 examples [00:07, 13386.02 examples/s]Generating train split: 105772 examples [00:07, 13456.67 examples/s]Generating train split: 107427 examples [00:08, 13448.50 examples/s]Generating train split: 109081 examples [00:08, 13492.55 examples/s]Generating train split: 110736 examples [00:08, 13600.24 examples/s]Generating train split: 112388 examples [00:08, 13619.40 examples/s]Generating train split: 114042 examples [00:08, 13539.91 examples/s]Generating train split: 115694 examples [00:08, 13582.31 examples/s]Generating train split: 117349 examples [00:08, 13606.04 examples/s]Generating train split: 119003 examples [00:08, 13634.80 examples/s]Generating train split: 120658 examples [00:09, 13639.70 examples/s]Generating train split: 122313 examples [00:09, 13576.07 examples/s]Generating train split: 123968 examples [00:09, 13610.56 examples/s]Generating train split: 125622 examples [00:09, 13647.61 examples/s]Generating train split: 127277 examples [00:09, 13672.76 examples/s]Generating train split: 128931 examples [00:09, 13645.06 examples/s]Generating train split: 130587 examples [00:09, 13340.21 examples/s]Generating train split: 132242 examples [00:09, 13102.40 examples/s]Generating train split: 133897 examples [00:10, 13094.06 examples/s]Generating train split: 135552 examples [00:10, 13090.74 examples/s]Generating train split: 137208 examples [00:10, 13112.04 examples/s]Generating train split: 138863 examples [00:10, 13124.73 examples/s]Generating train split: 140520 examples [00:10, 13123.99 examples/s]Generating train split: 142174 examples [00:10, 13119.13 examples/s]Generating train split: 142234 examples [00:10, 13363.88 examples/s]
+Map (num_proc=64):   0%|          | 0/142234 [00:00<?, ? examples/s]Map (num_proc=64):   1%|          | 1000/142234 [00:00<00:40, 3498.18 examples/s]Map (num_proc=64):   7%|▋         | 10000/142234 [00:00<00:04, 31759.18 examples/s]Map (num_proc=64):  18%|█▊        | 25000/142234 [00:00<00:01, 69313.97 examples/s]Map (num_proc=64):  46%|████▌     | 64784/142234 [00:00<00:00, 169462.01 examples/s]Map (num_proc=64):  60%|██████    | 85791/142234 [00:00<00:00, 159952.35 examples/s]Map (num_proc=64):  82%|████████▏ | 117238/142234 [00:00<00:00, 199413.80 examples/s]Map (num_proc=64): 100%|██████████| 142234/142234 [00:00<00:00, 143344.58 examples/s]
+Map (num_proc=64):   0%|          | 0/142234 [00:00<?, ? examples/s]Map (num_proc=64):   1%|          | 1000/142234 [00:34<1:20:59, 29.06 examples/s]Map (num_proc=64):   2%|▏         | 3000/142234 [00:34<21:08, 109.75 examples/s] Map (num_proc=64):   3%|▎         | 4000/142234 [00:35<13:52, 166.05 examples/s]Map (num_proc=64):   4%|▎         | 5000/142234 [00:35<09:32, 239.79 examples/s]Map (num_proc=64):   4%|▍         | 6000/142234 [00:35<06:39, 340.96 examples/s]Map (num_proc=64):   6%|▌         | 8000/142234 [00:36<03:37, 616.45 examples/s]Map (num_proc=64):   6%|▋         | 9000/142234 [00:36<02:49, 787.02 examples/s]Map (num_proc=64):   7%|▋         | 10000/142234 [00:36<02:10, 1015.42 examples/s]Map (num_proc=64):   8%|▊         | 11000/142234 [00:36<01:39, 1316.47 examples/s]Map (num_proc=64):   9%|▉         | 13000/142234 [00:37<01:01, 2117.38 examples/s]Map (num_proc=64):  10%|▉         | 14000/142234 [00:37<01:03, 2013.12 examples/s]Map (num_proc=64):  11%|█         | 16000/142234 [00:37<00:42, 2984.61 examples/s]Map (num_proc=64):  12%|█▏        | 17000/142234 [00:38<00:45, 2739.82 examples/s]Map (num_proc=64):  13%|█▎        | 18000/142234 [00:38<00:39, 3133.23 examples/s]Map (num_proc=64):  13%|█▎        | 19000/142234 [00:38<00:38, 3230.21 examples/s]Map (num_proc=64):  14%|█▍        | 20000/142234 [00:38<00:33, 3684.32 examples/s]Map (num_proc=64):  15%|█▌        | 22000/142234 [00:39<00:28, 4211.88 examples/s]Map (num_proc=64):  18%|█▊        | 25000/142234 [00:39<00:17, 6834.26 examples/s]Map (num_proc=64):  18%|█▊        | 26000/142234 [00:39<00:17, 6523.61 examples/s]Map (num_proc=64):  19%|█▉        | 27000/142234 [00:39<00:20, 5692.59 examples/s]Map (num_proc=64):  20%|█▉        | 28000/142234 [00:40<00:19, 5972.05 examples/s]Map (num_proc=64):  20%|██        | 29000/142234 [00:40<00:17, 6388.87 examples/s]Map (num_proc=64):  21%|██        | 30000/142234 [00:40<00:18, 6046.99 examples/s]Map (num_proc=64):  22%|██▏       | 32000/142234 [00:40<00:18, 5902.18 examples/s]Map (num_proc=64):  23%|██▎       | 33000/142234 [00:40<00:17, 6124.73 examples/s]Map (num_proc=64):  24%|██▍       | 34000/142234 [00:41<00:21, 5096.95 examples/s]Map (num_proc=64):  25%|██▍       | 35000/142234 [00:41<00:21, 4895.16 examples/s]Map (num_proc=64):  25%|██▌       | 36000/142234 [00:41<00:29, 3602.20 examples/s]Map (num_proc=64):  27%|██▋       | 38000/142234 [00:42<00:27, 3776.91 examples/s]Map (num_proc=64):  27%|██▋       | 39000/142234 [00:42<00:36, 2801.48 examples/s]Map (num_proc=64):  28%|██▊       | 40000/142234 [00:43<00:31, 3207.99 examples/s]Map (num_proc=64):  30%|██▉       | 42000/142234 [00:43<00:20, 4847.51 examples/s]Map (num_proc=64):  32%|███▏      | 46000/142234 [00:43<00:16, 5809.77 examples/s]Map (num_proc=64):  34%|███▎      | 48000/142234 [00:44<00:13, 6957.47 examples/s]Map (num_proc=64):  34%|███▍      | 49000/142234 [00:44<00:15, 6156.06 examples/s]Map (num_proc=64):  35%|███▌      | 50000/142234 [00:44<00:18, 5093.02 examples/s]Map (num_proc=64):  36%|███▌      | 51000/142234 [00:44<00:17, 5297.48 examples/s]Map (num_proc=64):  37%|███▋      | 53000/142234 [00:45<00:18, 4714.85 examples/s]Map (num_proc=64):  38%|███▊      | 54000/142234 [00:45<00:16, 5236.86 examples/s]Map (num_proc=64):  39%|███▊      | 55000/142234 [00:45<00:15, 5526.64 examples/s]Map (num_proc=64):  39%|███▉      | 56000/142234 [00:46<00:30, 2832.39 examples/s]Map (num_proc=64):  41%|████      | 58000/142234 [00:46<00:22, 3792.66 examples/s]Map (num_proc=64):  41%|████▏     | 59000/142234 [00:47<00:24, 3465.96 examples/s]Map (num_proc=64):  43%|████▎     | 61000/142234 [00:47<00:18, 4363.32 examples/s]Map (num_proc=64):  44%|████▎     | 62000/142234 [00:47<00:18, 4343.36 examples/s]Map (num_proc=64):  44%|████▍     | 63000/142234 [00:47<00:20, 3929.81 examples/s]Map (num_proc=64):  45%|████▍     | 64000/142234 [00:48<00:17, 4472.41 examples/s]Map (num_proc=64):  45%|████▍     | 64000/142234 [01:02<00:17, 4472.41 examples/s]Map (num_proc=64):  46%|████▌     | 65000/142234 [01:10<07:46, 165.45 examples/s] Map (num_proc=64):  47%|████▋     | 67000/142234 [01:10<04:22, 286.53 examples/s]Map (num_proc=64):  49%|████▊     | 69000/142234 [01:10<02:45, 442.27 examples/s]Map (num_proc=64):  49%|████▉     | 70000/142234 [01:11<02:14, 535.15 examples/s]Map (num_proc=64):  50%|████▉     | 71000/142234 [01:11<01:43, 685.46 examples/s]Map (num_proc=64):  51%|█████▏    | 73000/142234 [01:11<01:01, 1117.57 examples/s]Map (num_proc=64):  52%|█████▏    | 74000/142234 [01:11<00:52, 1309.86 examples/s]Map (num_proc=64):  53%|█████▎    | 75000/142234 [01:11<00:40, 1655.04 examples/s]Map (num_proc=64):  53%|█████▎    | 76000/142234 [01:12<00:31, 2097.26 examples/s]Map (num_proc=64):  54%|█████▍    | 77000/142234 [01:12<00:30, 2169.38 examples/s]Map (num_proc=64):  55%|█████▍    | 78000/142234 [01:12<00:26, 2405.90 examples/s]Map (num_proc=64):  56%|█████▌    | 80000/142234 [01:12<00:17, 3517.44 examples/s]Map (num_proc=64):  57%|█████▋    | 81000/142234 [01:13<00:15, 3861.29 examples/s]Map (num_proc=64):  58%|█████▊    | 83000/142234 [01:13<00:12, 4816.10 examples/s]Map (num_proc=64):  59%|█████▉    | 84000/142234 [01:14<00:19, 2996.35 examples/s]Map (num_proc=64):  60%|█████▉    | 85000/142234 [01:14<00:17, 3180.63 examples/s]Map (num_proc=64):  60%|██████    | 86000/142234 [01:14<00:15, 3740.32 examples/s]Map (num_proc=64):  61%|██████    | 87000/142234 [01:14<00:15, 3544.77 examples/s]Map (num_proc=64):  62%|██████▏   | 88000/142234 [01:15<00:15, 3462.80 examples/s]Map (num_proc=64):  64%|██████▍   | 91000/142234 [01:15<00:07, 6645.00 examples/s]Map (num_proc=64):  65%|██████▌   | 93000/142234 [01:15<00:08, 6022.11 examples/s]Map (num_proc=64):  66%|██████▌   | 94000/142234 [01:16<00:09, 5155.87 examples/s]Map (num_proc=64):  67%|██████▋   | 95000/142234 [01:16<00:09, 4828.97 examples/s]Map (num_proc=64):  67%|██████▋   | 96000/142234 [01:16<00:12, 3840.94 examples/s]Map (num_proc=64):  70%|██████▉   | 99000/142234 [01:16<00:07, 6169.79 examples/s]Map (num_proc=64):  71%|███████   | 101000/142234 [01:17<00:05, 7606.91 examples/s]Map (num_proc=64):  72%|███████▏  | 103000/142234 [01:17<00:05, 6594.41 examples/s]Map (num_proc=64):  73%|███████▎  | 104446/142234 [01:18<00:08, 4637.75 examples/s]Map (num_proc=64):  76%|███████▌  | 107446/142234 [01:18<00:05, 6207.96 examples/s]Map (num_proc=64):  77%|███████▋  | 109115/142234 [01:18<00:05, 5583.69 examples/s]Map (num_proc=64):  78%|███████▊  | 111338/142234 [01:18<00:04, 6227.46 examples/s]Map (num_proc=64):  79%|███████▉  | 112338/142234 [01:19<00:04, 6506.02 examples/s]Map (num_proc=64):  80%|███████▉  | 113784/142234 [01:19<00:03, 7484.07 examples/s]Map (num_proc=64):  81%|████████  | 114784/142234 [01:19<00:03, 7749.50 examples/s]Map (num_proc=64):  82%|████████▏ | 116007/142234 [01:19<00:03, 8165.15 examples/s]Map (num_proc=64):  83%|████████▎ | 117452/142234 [01:19<00:02, 8369.28 examples/s]Map (num_proc=64):  83%|████████▎ | 118452/142234 [01:19<00:03, 6290.06 examples/s]Map (num_proc=64):  84%|████████▍ | 119341/142234 [01:20<00:04, 5038.26 examples/s]Map (num_proc=64):  85%|████████▌ | 121564/142234 [01:20<00:02, 6939.57 examples/s]Map (num_proc=64):  86%|████████▌ | 122564/142234 [01:20<00:02, 7333.21 examples/s]Map (num_proc=64):  87%|████████▋ | 124232/142234 [01:20<00:02, 6374.27 examples/s]Map (num_proc=64):  89%|████████▊ | 125900/142234 [01:21<00:03, 5003.71 examples/s]Map (num_proc=64):  89%|████████▉ | 127123/142234 [01:21<00:02, 5863.94 examples/s]Map (num_proc=64):  90%|█████████ | 128123/142234 [01:21<00:02, 6103.32 examples/s]Map (num_proc=64):  91%|█████████▏| 129789/142234 [01:21<00:02, 5110.90 examples/s]Map (num_proc=64):  92%|█████████▏| 130789/142234 [01:22<00:02, 3937.72 examples/s]Map (num_proc=64):  93%|█████████▎| 132011/142234 [01:22<00:02, 4247.03 examples/s]Map (num_proc=64):  94%|█████████▍| 133457/142234 [01:23<00:02, 3576.42 examples/s]Map (num_proc=64):  94%|█████████▍| 134125/142234 [01:23<00:02, 2730.47 examples/s]Map (num_proc=64):  95%|█████████▍| 134570/142234 [01:23<00:02, 2754.85 examples/s]Map (num_proc=64):  95%|█████████▍| 135015/142234 [01:24<00:03, 2200.89 examples/s]Map (num_proc=64):  95%|█████████▌| 135461/142234 [01:24<00:03, 2174.82 examples/s]Map (num_proc=64):  96%|█████████▌| 135905/142234 [01:24<00:03, 1822.86 examples/s]Map (num_proc=64):  96%|█████████▋| 136905/142234 [01:24<00:01, 2695.41 examples/s]Map (num_proc=64):  97%|█████████▋| 137349/142234 [01:25<00:02, 2197.06 examples/s]Map (num_proc=64):  97%|█████████▋| 137794/142234 [01:25<00:02, 1934.21 examples/s]Map (num_proc=64):  97%|█████████▋| 138238/142234 [01:25<00:02, 1816.57 examples/s]Map (num_proc=64):  98%|█████████▊| 138682/142234 [01:26<00:02, 1764.40 examples/s]Map (num_proc=64):  98%|█████████▊| 138904/142234 [01:26<00:02, 1385.32 examples/s]Map (num_proc=64):  98%|█████████▊| 139348/142234 [01:26<00:02, 1215.12 examples/s]Map (num_proc=64):  98%|█████████▊| 139570/142234 [01:27<00:02, 1198.50 examples/s]Map (num_proc=64):  98%|█████████▊| 140014/142234 [01:27<00:01, 1503.63 examples/s]Map (num_proc=64):  99%|█████████▉| 140458/142234 [01:27<00:01, 1628.57 examples/s]Map (num_proc=64):  99%|█████████▉| 140902/142234 [01:27<00:00, 1533.77 examples/s]Map (num_proc=64):  99%|█████████▉| 141346/142234 [01:28<00:00, 1505.66 examples/s]Map (num_proc=64): 100%|█████████▉| 141790/142234 [01:28<00:00, 1466.63 examples/s]Map (num_proc=64): 100%|█████████▉| 142012/142234 [01:28<00:00, 1378.80 examples/s]Map (num_proc=64): 100%|██████████| 142234/142234 [01:29<00:00, 648.22 examples/s] Map (num_proc=64): 100%|██████████| 142234/142234 [01:29<00:00, 1583.11 examples/s]
+[INFO:swift] train_dataset: Dataset({
+    features: ['messages', 'lengths'],
+    num_rows: 142234
+})
+[INFO:swift] val_dataset: None
+[INFO:swift] [INPUT_IDS] [151644, 8948, 198, 2610, 525, 458, 15235, 6203, 304, 35715, 3075, 18212, 64816, 6358, 13, 4615, 3383, 374, 311, 7023, 279, 4583, 2169, 14862, 7289, 369, 23921, 7493, 10010, 1283, 264, 2661, 18212, 64816, 13, 8886, 2504, 5610, 220, 16, 17, 20, 20727, 13, 13655, 279, 20727, 2878, 1817, 2550, 2504, 304, 279, 1852, 8674, 1973, 438, 807, 4994, 304, 279, 25869, 2524, 7493, 13, 151645, 198, 151644, 872, 198, 58, 10547, 921, 3599, 1555, 25, 7856, 52, 198, 47, 529, 64816, 943, 25, 5506, 198, 47, 529, 64816, 829, 25, 451, 10360, 198, 9501, 45978, 25, 7284, 43504, 31, 39, 60, 16, 28668, 3025, 8, 34, 7, 28, 46, 46986, 17, 638, 8204, 34, 7, 28, 46, 8, 45, 66, 18, 55597, 7, 7612, 46986, 18, 8, 37054, 17, 7612, 43504, 19191, 39, 9533, 34, 8, 45, 74071, 17, 3706, 17, 8, 34, 43504, 19191, 39, 60, 16, 34, 198, 98554, 882, 25, 220, 17, 19, 305, 271, 58, 3273, 16378, 921, 26998, 26095, 19, 431, 5012, 21, 14773, 33, 22, 6261, 6408, 17, 15552, 44180, 18, 17912, 479, 34496, 55484, 45, 472, 31939, 6412, 16, 24458, 43, 13534, 33342, 16, 386, 5177, 96966, 17, 38, 19, 32, 1863, 38067, 18, 24, 20, 60656, 8505, 16, 19172, 9745, 2274, 47, 17, 17, 431, 15469, 16, 19, 5627, 55, 19, 2726, 34, 16, 386, 4086, 51, 16, 16, 393, 20538, 21, 15, 33757, 16, 4984, 3256, 18, 434, 1402, 21, 24, 32, 6434, 33, 431, 17896, 16, 10006, 76180, 16, 36, 5851, 44, 17, 3928, 4493, 16, 24795, 17, 32, 11078, 19, 19, 5260, 828, 28667, 16, 22060, 6140, 35318, 3994, 16, 6673, 7326, 393, 8626, 11604, 16, 393, 867, 42, 52148, 16, 5627, 55, 17, 11405, 6076, 17, 9256, 6504, 17, 48848, 37, 17, 3298, 393, 2537, 35, 22, 547, 11594, 17, 43, 21, 356, 17, 6484, 20, 472, 2773, 16, 32, 647, 71302, 16, 472, 87192, 19, 328, 8556, 17, 22, 32, 18, 3928, 42, 17, 20, 45816, 5012, 16, 4984, 1791, 17, 66892, 16, 18, 44550, 7380, 19, 16, 39309, 17, 15, 431, 969, 38, 5936, 468, 28222, 18, 28297, 50, 2537, 17, 1863, 44, 2843, 16, 425, 10842, 43, 17924, 5049, 9630, 8626, 38, 16, 393, 4239, 77020, 7531, 3976, 16, 350, 1570, 19360, 37, 16, 12878, 3627, 39, 16, 33, 18, 393, 15778, 17, 451, 952, 16, 14892, 43, 431, 1799, 33, 11405, 6076, 19, 11078, 17155, 16, 33, 17742, 44, 16, 22, 33, 425, 4493, 16, 33, 47173, 45, 16, 8575, 42, 62538, 393, 4239, 17612, 386, 4677, 828, 22, 61687, 393, 9501, 37, 16, 472, 31939, 8973, 18572, 45, 8065, 16, 472, 1706, 35, 18, 425, 2954, 67710, 39, 5626, 17, 7284, 38, 22, 30044, 1402, 16, 386, 17155, 42, 16, 36822, 50195, 53622, 53, 18, 43, 16, 12617, 52983, 22578, 42, 18, 5049, 6976, 1317, 19, 17924, 55, 16, 18, 18572, 5491, 66556, 16, 16, 33, 6434, 34, 16, 29070, 20, 18, 26095, 17, 43240, 4728, 17, 32907, 44, 18, 350, 2104, 32, 17, 356, 2801, 26095, 434, 5491, 16, 45816, 39, 16, 19087, 10504, 16, 32834, 57, 16, 31921, 55, 46, 17, 16, 386, 84130, 619, 1861, 22236, 37773, 386, 2773, 74780, 35, 16, 16079, 2916, 16, 30572, 51, 16, 468, 2149, 16, 356, 8065, 47, 17, 350, 1570, 42, 16, 10584, 828, 17, 425, 8556, 2537, 48483, 8973, 19, 20059, 2537, 35, 17, 547, 11594, 17, 34, 90474, 20, 362, 9389, 16, 12878, 3627, 39, 16, 33, 16, 12169, 1706, 17, 6826, 1706, 16, 451, 1637, 2149, 451, 1740, 2916, 16, 11078, 42, 22, 451, 934, 6126, 30923, 10504, 28667, 17, 16, 27129, 16, 6976, 7749, 15552, 46107, 21, 49608, 12335, 17, 26081, 47, 16, 11405, 3298, 16, 7531, 50195, 16, 16036, 45, 16, 13716, 934, 3706, 16, 39295, 17, 37, 21, 11405, 7462, 17, 4984, 1791, 16, 18, 8753, 1911, 16, 393, 867, 75729, 41, 16, 17258, 1706, 17, 17658, 20, 5626, 17, 39309, 19, 20, 71784, 37, 19, 60656, 8505, 18, 32, 43461, 56, 506, 59450, 16, 43, 468, 6754, 1867, 16, 19, 386, 10808, 17, 53063, 33, 28333, 2916, 16, 17, 356, 2821, 16, 431, 22246, 9389, 16, 66556, 16, 33, 16, 11551, 45, 934, 16, 444, 13095, 74038, 17, 49, 20, 36, 22884, 37, 16, 17031, 43, 7326, 29145, 2537, 17, 32, 451, 2034, 2537, 16, 479, 1593, 35, 19, 431, 1867, 18, 16, 547, 40849, 39, 43981, 328, 8556, 17, 32, 21, 468, 17896, 17, 11405, 7380, 16, 547, 11594, 17, 32, 358, 36332, 17, 49, 479, 10808, 17, 32, 17, 67953, 16, 48297, 10504, 17, 386, 8590, 21, 23975, 2716, 24, 22, 26492, 10098, 17, 67572, 33, 17, 479, 15665, 19, 20, 32, 647, 3825, 43, 19, 356, 3012, 47, 17031, 26319, 35, 16, 328, 11604, 16, 32, 451, 3124, 23, 20, 472, 31939, 17, 15, 33, 31640, 49, 16, 34, 91598, 17, 5190, 3067, 39, 16, 386, 15204, 16, 10635, 45, 17, 20694, 2537, 687, 16, 393, 8276, 16, 32787, 69004, 31640, 49, 17, 40, 362, 4728, 19, 34, 6673, 8505, 16, 451, 3124, 16, 18, 18, 6976, 784, 45, 16, 17924, 55, 22, 11344, 16, 18, 5609, 16, 51618, 35849, 16, 13716, 934, 5049, 19, 27974, 44, 18, 19, 422, 25679, 472, 20252, 16, 11078, 19, 15, 22578, 42, 18, 34, 17, 33, 25578, 19, 32, 16, 23975, 2716, 20, 15, 32, 15284, 3944, 18, 89204, 17, 434, 57, 35, 22, 730, 5863, 32, 15, 16, 24, 21, 444, 16567, 17, 69352, 33, 18, 29615, 42, 17, 422, 1748, 32, 356, 35646, 22, 32, 27974, 44, 21, 350, 4493, 33, 21, 422, 37325, 16, 43, 11078, 42, 17, 547, 11594, 17, 41, 16, 10006, 76180, 17, 32, 17, 66556, 21, 53, 16, 35, 730, 828, 21, 32, 29569, 6412, 30572, 49, 22, 32, 17, 71328, 18, 24591, 640, 38, 16, 362, 6484, 328, 16680, 47, 17, 328, 8556, 18, 20, 32, 16, 39309, 19, 17, 8030, 30725, 4984, 2537, 4872, 18, 472, 3846, 17, 39, 17, 11594, 2274, 47, 21, 30042, 13534, 5626, 24, 17, 43240, 5626, 16, 27223, 19, 42, 19, 4183, 2149, 16, 425, 915, 3928, 55, 19, 350, 67023, 19, 547, 25609, 16, 479, 4239, 26095, 23, 393, 3021, 17, 11078, 42, 16, 24, 393, 2045, 55, 7284, 38, 17, 350, 4897, 16, 35, 18, 16, 44188, 46, 18, 393, 25674, 16, 350, 2104, 969, 19, 6976, 31160, 358, 17048, 17, 472, 4592, 35, 16, 393, 4239, 45, 16, 14659, 40849, 39, 24826, 1914, 356, 6610, 16, 8700, 38, 13669, 13534, 33342, 17, 350, 867, 16, 6261, 915, 20, 33, 431, 8041, 17, 393, 1593, 35, 18, 30080, 2916, 16, 27223, 42, 2537, 42, 20, 17742, 44, 24, 32787, 11451, 22, 89933, 44, 16, 43, 425, 81756, 17, 43398, 1890, 32, 3928, 55, 16, 32, 3043, 35, 13485, 730, 2773, 20, 34, 434, 1381, 16, 451, 3298, 18966, 2537, 16, 11090, 2537, 16, 6261, 4406, 16, 24, 12169, 1706, 21, 2100, 42, 36690, 16, 15, 362, 1511, 29862, 9630, 828, 16, 434, 24273, 451, 3021, 16, 393, 5609, 37, 17, 6826, 5781, 19, 32, 15490, 57, 16, 17, 39233, 20, 393, 3706, 33, 350, 67023, 21, 12617, 42, 472, 45, 16, 43, 2274, 47, 16, 19, 3034, 17, 451, 8281, 32, 18, 358, 36332, 17, 26095, 17, 479, 7326, 16, 20, 547, 11594, 18, 34, 27974, 44, 16, 20, 33, 4984, 2537, 4872, 21, 32, 730, 29171, 16, 18224, 46, 16, 15, 79299, 23025, 39, 444, 24273, 479, 7326, 16, 16, 27223, 42, 16, 3298, 16, 43, 31640, 49, 17, 42, 451, 8505, 16, 27695, 19, 38, 16, 27223, 42, 24, 356, 640, 42, 350, 1162, 32, 1863, 38067, 17, 22, 19, 26101, 45, 16, 730, 828, 21, 33, 356, 23705, 18, 55484, 5781, 17, 76224, 16, 15, 82465, 44, 22, 15, 32, 5588, 45813, 23975, 8281, 16, 472, 5491, 16, 22, 33, 16, 15, 74574, 26095, 16, 472, 56389, 16, 14659, 29862, 27695, 20, 63286, 39, 17, 468, 1593, 30698, 21, 350, 3399, 422, 2954, 55, 63612, 7749, 16, 479, 35320, 16, 33, 5627, 6412, 17, 67710, 13485, 24, 17924, 55, 21, 25012, 26095, 16, 451, 3124, 23, 23, 11078, 17155, 16, 32, 467, 3298, 37, 17, 6826, 45, 16, 730, 5863, 32, 15, 24, 15, 22, 422, 2034, 47, 16, 16, 350, 44756, 17, 8575, 7123, 22578, 42, 18, 49, 18, 9221, 50, 18, 29730, 35, 20, 13716, 45, 5626, 16, 730, 5863, 32, 15, 22, 20, 18, 431, 1867, 19, 32, 92127, 8598, 422, 2034, 47, 19, 66556, 17, 34, 16, 19288, 8505, 75194, 19, 40711, 687, 16, 472, 17, 8276, 53, 422, 1162, 35, 73061, 3588, 45, 17, 45316, 3298, 18, 43, 11078, 42, 19, 393, 1893, 36, 422, 2034, 47, 21, 434, 1637, 16, 1863, 11698, 18, 21, 431, 8041, 16, 479, 7326, 40, 17, 27223, 42, 2537, 42, 17, 328, 11604, 18, 451, 4656, 51, 24, 328, 8556, 20, 32, 21, 13534, 5626, 23, 21, 28333, 5012, 17, 47592, 16, 1863, 38067, 19, 20, 16, 451, 1930, 18, 6673, 9548, 16, 39295, 1911, 29569, 33, 20, 21, 16, 4984, 2537, 16, 350, 26095, 431, 1867, 17, 22, 32, 472, 3846, 16, 39, 17, 88307, 393, 15778, 17, 33, 393, 4239, 45, 16, 17, 14309, 2537, 16, 9256, 953, 434, 11383, 50, 422, 8505, 37, 16, 434, 14323, 38137, 1402, 16, 44188, 41, 18, 25692, 1914, 16, 431, 1867, 17, 16, 393, 11907, 19, 30904, 952, 19, 1863, 19159, 44, 17, 39295, 3298, 16, 47718, 479, 4872, 16, 29070, 20, 18, 26095, 16, 43760, 16, 422, 12335, 10315, 47, 17, 350, 1162, 45, 16, 386, 9985, 18, 36711, 38, 2537, 16, 51267, 468, 90106, 479, 18, 26095, 16, 15552, 58367, 16, 20, 17742, 47, 17, 23975, 24, 28667, 18, 1863, 38067, 20, 23, 24, 468, 94306, 16, 17742, 44, 17, 17, 39309, 17, 20, 33, 1863, 38067, 16, 18, 16, 730, 2773, 16, 26095, 44727, 828, 34, 19, 14773, 45, 37776, 37, 18, 92851, 21, 11078, 42, 16, 3385, 8973, 16, 468, 14707, 41790, 47, 16, 15, 49142, 7326, 16, 26095, 17, 356, 8264, 23025, 82052, 49915, 21, 647, 8093, 18, 6261, 915, 19, 33, 16079, 42, 8700, 5381, 16, 26095, 16, 39295, 16, 39, 17, 350, 4897, 16, 35, 24, 33, 6261, 90111, 2537, 16, 38254, 5491, 16, 15, 10315, 42, 16, 10922, 1861, 16, 35, 19, 451, 953, 37, 350, 27188, 16, 30080, 59450, 17, 49, 472, 4592, 33, 16, 425, 19, 38, 828, 16, 11405, 6076, 24, 31640, 33, 358, 36332, 16, 49, 10292, 5609, 422, 6408, 51, 3298, 17, 9630, 1402, 16, 15, 17031, 45, 5626, 24, 18224, 9389, 17, 17031, 30042, 19, 33, 15645, 47, 4656, 16, 9256, 1890, 22, 444, 20637, 45, 467, 7687, 22, 69961, 16, 32, 75921, 16, 16, 15, 393, 1914, 33, 425, 1890, 18, 356, 9389, 33, 23975, 2716, 17, 362, 17048, 328, 8556, 17, 20, 32, 19, 80117, 18, 24, 386, 6349, 17, 10006, 76180, 16, 32, 16, 451, 3126, 3298, 386, 35830, 16, 6261, 39, 10777, 37, 17, 547, 4239, 16, 19, 32, 328, 11604, 19, 1599, 2045, 22, 28333, 5012, 16, 21, 431, 11451, 16, 13534, 51271, 6261, 37, 3298, 17, 431, 23818, 32, 393, 11907, 16, 32907, 52, 6434, 18, 26095, 20, 14773, 33, 16, 15, 9256, 13649, 74038, 16, 49, 16, 18, 33, 23975, 2716, 16, 16, 15, 10006, 42, 328, 8556, 17, 20, 32, 16, 18, 28333, 2916, 16, 24, 23975, 1479, 16, 15, 730, 8395, 20, 32, 7369, 16413, 29626, 12979, 41790, 47, 18, 386, 4198, 37, 18, 386, 2749, 42, 10006, 21657, 16, 358, 10504, 35, 17, 40026, 2828, 16, 5588, 40, 17, 39309, 17, 20, 32, 30572, 2537, 23, 43, 422, 3021, 22578, 39, 16, 35, 16, 431, 13669, 16, 30572, 2537, 23, 44727, 1715, 18, 31921, 36530, 16, 17, 647, 5012, 22, 17, 9630, 39, 20, 328, 8556, 16, 16, 32, 17, 24872, 37881, 18, 11078, 18, 17, 15, 472, 1808, 39, 422, 2034, 47, 18, 4984, 3256, 16, 8753, 51326, 22, 32, 16, 10106, 10098, 17, 29145, 10298, 16, 350, 3540, 17, 17, 35, 18, 356, 9197, 20, 22, 393, 5936, 20, 32, 3928, 1402, 26095, 27223, 17, 42, 20, 10315, 37309, 18, 92851, 20, 26081, 47, 17, 479, 26227, 6352, 16, 11078, 17155, 17, 32, 431, 79592, 16, 17912, 26095, 17, 479, 1867, 40637, 16, 11344, 42, 42760, 3825, 11685, 828, 49, 16, 451, 3021, 17, 350, 32131, 17, 15552, 46107, 17, 730, 2773, 17, 34, 444, 14557, 6159, 8106, 37, 16, 25012, 17, 32, 451, 3124, 24, 18, 356, 8264, 47, 57, 3928, 55, 26095, 17, 61901, 65036, 1863, 54, 16, 15, 434, 1402, 21, 18, 32, 16079, 3944, 17, 8575, 42, 55, 91750, 45, 16, 29070, 20, 18, 393, 3298, 19, 42, 17, 33, 730, 8395, 20, 33, 431, 38067, 16, 21, 22, 468, 9951, 16, 8575, 1220, 17, 18, 74038, 17, 49, 18, 34, 479, 9654, 16, 7206, 28668, 16, 350, 23025, 20, 17, 43, 17, 434, 1402, 17, 15, 33, 16292, 17, 451, 11419, 17, 43, 17, 3424, 7612, 16, 431, 1893, 32, 13339, 4239, 50, 16, 9630, 40, 16, 328, 8556, 18, 20, 33, 16, 472, 87192, 23, 63644, 16, 7369, 38, 18, 730, 5863, 32, 15, 16, 15, 15, 26474, 60845, 84807, 47, 21, 356, 11242, 57, 44727, 828, 34, 18, 422, 37325, 16, 431, 21657, 16, 17, 22578, 42, 18, 34, 18, 444, 21657, 2537, 16, 4434, 2537, 16, 16, 11078, 42, 20, 49, 16, 422, 2034, 47, 17, 17, 11405, 8412, 16, 15, 431, 4406, 18, 23, 29850, 1317, 72281, 17, 393, 19, 2545, 44, 23975, 2716, 20, 24981, 16, 730, 2773, 17, 15, 32, 467, 7687, 21, 16, 14659, 42916, 17, 393, 8106, 16, 20, 43, 8700, 12001, 16, 45816, 8505, 730, 1162, 35, 20, 26465, 46, 16, 32, 425, 51840, 20, 431, 969, 33, 13534, 7326, 17, 451, 4656, 6484, 18, 547, 11594, 18, 33, 809, 7462, 16, 43, 16, 472, 828, 16, 356, 12173, 16, 6826, 1317, 17, 14137, 19147, 21, 1863, 38067, 18, 16, 23, 393, 7498, 49, 11078, 39, 18, 468, 1479, 362, 5865, 15552, 46107, 16, 8575, 64638, 48, 393, 9501, 38, 16, 468, 2668, 18, 422, 16591, 19, 17, 19360, 37, 18, 434, 57, 35, 16, 358, 29862, 42, 2537, 356, 7384, 92533, 17, 20, 393, 4239, 7380, 451, 5459, 33, 17, 328, 30465, 16524, 3928, 55, 26095, 16, 39864, 50, 687, 18, 451, 26998, 33, 5863, 23975, 2716, 16, 15, 24, 18224, 34, 24977, 16, 393, 26998, 43, 479, 10808, 17, 36, 17, 362, 2045, 36, 45728, 19, 730, 5863, 32, 16, 15, 18, 18, 472, 1570, 16, 23229, 52, 16, 11078, 20, 23, 809, 3617, 5262, 16, 50733, 89609, 20, 479, 33342, 20, 431, 16522, 17, 13534, 5626, 23, 20, 33, 422, 1748, 33, 393, 20637, 16, 89204, 16, 468, 10842, 33, 17, 46180, 16208, 47, 18, 17258, 8093, 43, 16, 3928, 22, 42217, 16, 11405, 6076, 16, 15, 431, 1867, 16, 16, 37, 3298, 17, 444, 11383, 828, 16, 362, 28633, 16, 431, 2537, 16, 38, 2537, 12169, 38, 10504, 47, 18, 472, 5491, 16, 22, 33, 16, 16, 472, 17845, 9420, 5609, 44550, 7380, 16, 21, 32, 23975, 24, 28667, 17, 19360, 33, 21, 431, 97765, 13984, 47, 3981, 16, 33414, 17, 784, 16, 444, 88698, 479, 24896, 5752, 29923, 16, 30250, 59450, 20, 11078, 5049, 19, 425, 10994, 39, 431, 8041, 18, 431, 5012, 21, 26444, 16, 431, 16381, 20, 434, 30498, 16, 18572, 7984, 425, 51840, 17, 479, 15665, 19, 20, 33, 15645, 34, 21, 34995, 828, 16, 66186, 8065, 17, 35, 9412, 57, 43, 16, 393, 16524, 1791, 16, 422, 16591, 16, 15, 13339, 30042, 17, 358, 640, 18, 8575, 19701, 19, 434, 3126, 18224, 43, 24, 6976, 73812, 6826, 5781, 21, 29850, 7376, 425, 3140, 17, 13716, 1808, 18, 6261, 39, 10777, 37, 16, 17, 1863, 38067, 20, 23, 21, 356, 20, 350, 67023, 18, 467, 8485, 16, 27695, 19, 8264, 47, 16, 7284, 38, 19, 434, 13485, 17, 479, 4485, 17, 8753, 5865, 32, 422, 7783, 17, 19072, 33, 19, 16, 43, 17, 472, 8264, 47, 16, 328, 16, 15, 15, 32, 16, 18, 24311, 19147, 17, 44188, 46, 19, 40026, 2069, 16, 386, 14884, 17, 34, 356, 953, 1740, 13534, 38067, 15008, 39, 12072, 3090, 17, 43, 14659, 26444, 16, 350, 3298, 42793, 451, 3124, 21, 17, 13716, 934, 6484, 17, 506, 55, 1162, 16, 48523, 17, 451, 6408, 451, 26998, 33, 5371, 356, 3140, 17, 74038, 17, 49, 20, 32, 1964, 4406, 16, 49608, 33, 16, 451, 1930, 34, 16, 23403, 46737, 23, 3928, 42, 16, 15, 13534, 3944, 17, 31921, 55, 46, 16, 16, 27931, 57, 17, 18224, 12979, 47, 17, 358, 29862, 29862, 38673, 18, 24, 39, 16, 13339, 30042, 16, 393, 4835, 3298, 16, 14137, 19147, 19, 23690, 8884, 23, 66556, 20, 50, 75007, 16, 96316, 934, 472, 1898, 640, 17, 386, 1402, 12335, 16, 328, 8556, 18, 22, 32, 19, 358, 44676, 8412, 47, 17, 393, 8106, 22, 730, 5863, 32, 15, 18, 20, 20, 386, 19363, 45, 16, 362, 3825, 4063, 78961, 19, 55872, 16208, 18, 49521, 42, 17, 87320, 45, 18, 328, 8556, 16, 32, 19, 22578, 42, 18, 49, 19, 647, 2537, 33, 468, 15653, 16, 19288, 1402, 16, 356, 17, 6484, 17, 43, 18224, 12979, 47, 14850, 53, 5609, 356, 14065, 19, 468, 6484, 42254, 33, 16, 19796, 34, 18, 431, 5012, 20, 328, 8556, 17, 20, 32, 19, 21, 41790, 47, 17, 42760, 8973, 16, 11344, 19, 49, 32787, 55, 17, 24, 434, 11451, 17, 2274, 47, 22, 3928, 18, 38, 969, 20, 11344, 16, 33, 82465, 44, 18, 19, 66556, 21, 53, 15, 33, 31512, 33, 45316, 3298, 18, 547, 13095, 22, 422, 10842, 17, 31640, 38, 17, 95858, 77020, 18, 3928, 2537, 17, 472, 87192, 16, 32, 5017, 36530, 16, 39233, 17, 27223, 42, 16, 18, 7531, 49064, 16, 1599, 17896, 1740, 47, 16, 8575, 42, 1890, 17, 468, 17, 37, 17, 49521, 42, 16, 27223, 22, 7284, 52466, 18572, 9745, 969, 16, 431, 21657, 23, 393, 7863, 19, 90474, 21, 451, 8626, 45, 16079, 6140, 49, 18, 27223, 42, 2537, 42, 18, 10315, 37309, 16, 10584, 1793, 24, 4984, 11907, 17, 14137, 3706, 20, 2100, 46, 16, 15, 27223, 18, 42, 19, 328, 8556, 17, 20, 32, 16, 19, 350, 20117, 19, 358, 29862, 3390, 356, 14903, 45, 29569, 3617, 16, 74150, 24, 32, 27974, 16, 472, 28014, 17, 730, 8395, 18, 32, 386, 3925, 468, 36332, 444, 1914, 16, 451, 26998, 33, 17, 24328, 33, 328, 8556, 18, 20, 37, 17, 468, 1285, 16, 32, 422, 2034, 47, 16, 19, 356, 13095, 16, 393, 3257, 16, 16, 32, 8700, 5381, 20, 730, 952, 506, 55, 14557, 16, 809, 33539, 21, 25735, 17, 33, 16, 2100, 59450, 22, 31921, 55, 46, 22, 4984, 1402, 17, 13534, 7326, 16, 328, 868, 7347, 18, 5308, 50, 16, 18803, 5049, 16, 3596, 9197, 20, 451, 26998, 33, 3256, 434, 3126, 43, 16, 356, 17, 6484, 17, 12200, 5350, 16, 730, 2773, 16, 19, 13534, 8065, 18, 12932, 867, 17, 393, 7268, 16, 48297, 10504, 19, 96966, 17, 38, 16, 20, 431, 21657, 16, 33, 44741, 3919, 16, 9256, 1890, 19, 350, 89755, 11078, 42, 21, 3928, 21, 38, 969, 45, 1706, 17, 30080, 55, 17, 468, 26095, 393, 26227, 393, 4239, 45, 21, 425, 3140, 22, 33, 45414, 16128, 17, 31866, 17924, 55, 16, 16, 11405, 8412, 23, 8575, 42, 6484, 10584, 9548, 18, 1964, 4406, 19, 33, 356, 13095, 18, 47391, 90814, 16, 86005, 2916, 32, 16, 24981, 20, 33, 479, 17088, 444, 21657, 16, 15, 434, 1402, 20, 22, 32, 79987, 16, 444, 3585, 18, 75083, 20117, 17, 26474, 38, 3627, 30923, 3298, 16, 479, 6029, 30250, 59450, 16, 15, 41790, 47, 22, 647, 5012, 17, 23, 8575, 42, 2149, 350, 1317, 1402, 16, 25578, 16, 32, 16, 393, 19, 17020, 17, 29717, 16, 328, 8556, 18, 20, 32, 18, 2274, 47, 16, 95034, 2537, 362, 7687, 33, 17, 468, 8626, 16, 18224, 92963, 386, 3617, 14596, 17, 12878, 19100, 1863, 51326, 22455, 21, 1599, 26095, 16, 74150, 20, 16, 34, 479, 4485, 18, 84246, 26095, 16, 19, 479, 7326, 40, 16, 422, 3506, 17, 29850, 7581, 20869, 1511, 16, 9630, 3021, 18, 328, 4406, 16, 422, 24273, 27404, 18, 49510, 14773, 17563, 16, 362, 1511, 26444, 8753, 31464, 24591, 6126, 20, 27974, 40449, 5190, 3126, 37, 16, 350, 80878, 18, 27975, 9630, 57063, 20, 451, 3126, 18, 12072, 47, 16, 8575, 49389, 48483, 3140, 17, 328, 2828, 1093, 16, 21084, 76180, 16, 328, 2828, 8556, 17, 26492, 10098, 18, 350, 36332, 13095, 17, 328, 16, 15, 15, 32, 19, 39295, 18, 34, 16, 425, 5576, 17, 472, 17845, 9420, 4835, 431, 1706, 17, 350, 828, 31264, 17, 56111, 10504, 431, 2916, 18, 24, 43, 39310, 39, 16, 386, 5459, 16, 393, 2954, 23, 425, 15778, 92851, 16, 32834, 44, 17, 26474, 5863, 20, 328, 30521, 18, 425, 13485, 1799, 19, 15, 67710, 13485, 17, 16, 472, 10531, 55, 16, 434, 1911, 11405, 7462, 16, 393, 11907, 21, 444, 38100, 18, 19288, 1402, 18, 86005, 23652, 16, 89887, 51326, 7531, 55970, 18, 19370, 16522, 17, 356, 8264, 8041, 24981, 18, 619, 32841, 17, 23463, 45, 13534, 8065, 16, 151645, 198, 151644, 77091, 198, 151667, 271, 151668, 271, 4713, 220, 16, 25, 84246, 26095, 19, 431, 5012, 21, 14773, 33, 22, 6261, 6408, 17, 15552, 44180, 18, 17912, 479, 34496, 55484, 45, 472, 31939, 6412, 16, 24458, 43, 13534, 33342, 16, 386, 5177, 96966, 17, 38, 19, 32, 60656, 8505, 16, 19172, 9745, 2274, 47, 17, 17, 431, 15469, 16, 19, 5627, 55, 19, 2726, 34, 16, 386, 4086, 51, 16, 16, 393, 20538, 21, 15, 33757, 16, 4984, 3256, 18, 434, 1402, 21, 24, 32, 6434, 33, 431, 17896, 16, 10006, 76180, 16, 36, 5851, 44, 17, 3928, 4493, 16, 24795, 17, 32, 11078, 19, 19, 5260, 828, 28667, 16, 22060, 6140, 35318, 3994, 16, 6673, 7326, 393, 8626, 11604, 16, 5627, 55, 17, 11405, 6076, 17, 48848, 37, 17, 3298, 393, 2537, 35, 22, 547, 11594, 17, 43, 21, 472, 2773, 16, 32, 472, 87192, 19, 3928, 42, 17, 20, 45816, 5012, 16, 4984, 1791, 17, 44550, 7380, 19, 16, 39309, 17, 15, 431, 969, 38, 5936, 468, 28222, 18, 28297, 50, 2537, 17, 1863, 44, 2843, 16, 17924, 5049, 9630, 8626, 38, 16, 393, 4239, 77020, 19360, 37, 16, 12878, 3627, 39, 16, 33, 18, 393, 15778, 17, 451, 952, 16, 431, 1799, 33, 11078, 17155, 16, 33, 17742, 44, 16, 22, 33, 425, 4493, 16, 33, 47173, 45, 16, 472, 31939, 8973, 18572, 45, 8065, 16, 472, 1706, 35, 18, 67710, 39, 5626, 17, 7284, 38, 22, 30044, 1402, 16, 22578, 42, 18, 5049, 6976, 1317, 19, 350, 2104, 32, 17, 356, 2801, 26095, 434, 5491, 16, 386, 84130, 386, 2773, 468, 2149, 16, 425, 8556, 2537, 48483, 8973, 19, 547, 11594, 17, 34, 90474, 20, 12878, 3627, 39, 16, 33, 16, 12169, 1706, 17, 451, 1637, 2149, 27129, 16, 6976, 7749, 15552, 46107, 21, 13716, 934, 3706, 16, 8753, 1911, 16, 393, 867, 75729, 41, 16, 17658, 20, 5626, 17, 506, 59450, 16, 43, 386, 10808, 17, 53063, 33, 356, 2821, 16, 66556, 16, 33, 16, 17031, 43, 7326, 468, 17896, 17, 11405, 7380, 16, 17031, 26319, 35, 16, 5190, 3067, 39, 16, 386, 15204, 16, 10635, 45, 17, 11078, 19, 15, 15284, 3944, 18, 434, 57, 35, 22, 547, 11594, 17, 41, 16, 39309, 19, 17, 43240, 5626, 16, 4183, 2149, 16, 393, 2045, 55, 14659, 40849, 39, 13534, 33342, 17, 17742, 44, 24, 32787, 11451, 22, 12169, 1706, 21, 350, 1162, 32, 23975, 8281, 16, 431, 8041, 16, 1863, 19159, 44, 17, 25012, 17, 32, 431, 38067, 16, 21, 22, 38673, 18, 24, 39, 16, 328, 8556, 18, 20, 32, 18, 198, 4713, 220, 17, 25, 1863, 38067, 18, 24, 20, 393, 867, 42, 52148, 16, 9256, 6504, 17, 356, 17, 6484, 20, 328, 8556, 17, 22, 32, 18, 350, 1570, 14892, 43, 8575, 42, 62538, 393, 4239, 17612, 386, 4677, 828, 22, 425, 2954, 53622, 53, 18, 43, 16, 12617, 52983, 66556, 16, 16, 33, 29070, 20, 18, 26095, 17, 45816, 39, 16, 31921, 55, 46, 17, 16, 619, 1861, 74780, 35, 16, 16079, 2916, 16, 30572, 51, 16, 350, 1570, 42, 16, 10584, 828, 17, 362, 9389, 16, 451, 1740, 2916, 16, 30923, 10504, 28667, 17, 16, 26081, 47, 16, 11405, 3298, 16, 7531, 50195, 16, 11405, 7462, 17, 4984, 1791, 16, 18, 17258, 1706, 17, 71784, 37, 19, 43461, 56, 28333, 2916, 16, 17, 431, 22246, 9389, 16, 444, 13095, 74038, 17, 49, 20, 36, 479, 1593, 35, 19, 431, 1867, 18, 16, 547, 40849, 39, 328, 8556, 17, 32, 21, 358, 36332, 17, 49, 479, 10808, 17, 32, 17, 386, 8590, 21, 67572, 33, 17, 479, 15665, 19, 20, 32, 647, 3825, 43, 19, 356, 3012, 47, 472, 31939, 17, 15, 33, 20694, 2537, 687, 16, 31640, 49, 17, 40, 6673, 8505, 16, 451, 3124, 16, 18, 18, 6976, 784, 45, 16, 13716, 934, 5049, 19, 22578, 42, 18, 34, 17, 33, 25578, 19, 32, 16, 23975, 2716, 20, 15, 32, 730, 5863, 32, 15, 16, 24, 21, 29615, 42, 17, 356, 35646, 22, 32, 422, 37325, 16, 43, 66556, 21, 53, 16, 35, 730, 828, 21, 32, 30572, 49, 22, 32, 17, 24591, 640, 38, 16, 8030, 30725, 4984, 2537, 4872, 18, 350, 67023, 19, 547, 25609, 16, 358, 17048, 17, 24826, 1914, 350, 867, 16, 89933, 44, 16, 43, 3043, 35, 13485, 730, 2773, 20, 34, 6261, 4406, 16, 24, 2100, 42, 36690, 16, 15, 15490, 57, 16, 17, 547, 11594, 18, 34, 27974, 44, 16, 20, 33, 730, 29171, 16, 18224, 46, 16, 15, 79299, 23025, 39, 27223, 42, 16, 3298, 16, 43, 356, 23705, 18, 55484, 5781, 17, 5588, 45813, 472, 5491, 16, 22, 33, 16, 15, 14659, 29862, 27695, 20, 63286, 39, 17, 422, 2954, 55, 479, 35320, 16, 33, 67710, 13485, 24, 451, 3124, 23, 23, 730, 5863, 32, 15, 24, 15, 22, 22578, 42, 18, 49, 18, 45316, 3298, 18, 43, 1863, 11698, 18, 21, 27223, 42, 2537, 42, 17, 47592, 16, 39295, 3298, 16, 29070, 20, 18, 26095, 16, 6261, 915, 19, 33, 39295, 16, 39, 17, 9256, 1890, 22, 23975, 2716, 17, 328, 8556, 17, 20, 32, 19, 6261, 37, 3298, 17, 28333, 2916, 16, 24, 386, 4198, 37, 18, 393, 5936, 20, 32, 17912, 26095, 17, 328, 8556, 18, 20, 33, 16, 84807, 47, 21, 11078, 42, 20, 49, 16, 45816, 8505, 425, 51840, 20, 15552, 46107, 16, 393, 9501, 38, 16, 9412, 57, 43, 16, 328, 16, 15, 15, 32, 16, 18, 730, 8395, 18, 32, 198, 4713, 220, 18, 25, 647, 71302, 16, 66892, 16, 18, 425, 10842, 43, 7531, 3976, 16, 11405, 6076, 19, 393, 9501, 37, 16, 36822, 50195, 17924, 55, 16, 18, 43240, 4728, 17, 32907, 44, 18, 19087, 10504, 16, 32834, 57, 16, 22236, 37773, 20059, 2537, 35, 17, 11078, 42, 22, 451, 934, 6126, 16036, 45, 16, 39295, 17, 37, 21, 60656, 8505, 18, 32, 468, 6754, 1867, 16, 19, 451, 2034, 2537, 16, 67953, 16, 23975, 2716, 24, 22, 451, 3124, 23, 20, 393, 8276, 16, 17924, 55, 22, 51618, 35849, 16, 422, 25679, 444, 16567, 17, 422, 1748, 32, 27974, 44, 21, 13534, 5626, 24, 17, 27223, 19, 42, 19, 3928, 55, 19, 479, 4239, 26095, 23, 11078, 42, 16, 24, 350, 2104, 969, 19, 393, 4239, 45, 16, 8700, 38, 13669, 431, 8041, 17, 393, 1593, 35, 18, 425, 81756, 17, 43398, 1890, 32, 3928, 55, 16, 32, 434, 1381, 16, 451, 3298, 18966, 2537, 16, 11090, 2537, 16, 362, 1511, 29862, 434, 24273, 451, 3021, 16, 39233, 20, 393, 3706, 33, 350, 67023, 21, 12617, 42, 451, 8281, 32, 18, 451, 8505, 16, 27223, 42, 24, 356, 640, 42, 1863, 38067, 17, 22, 19, 730, 828, 21, 33, 468, 1593, 30698, 21, 17924, 55, 21, 25012, 26095, 16, 11078, 17155, 16, 32, 467, 3298, 37, 17, 422, 2034, 47, 19, 66556, 17, 34, 16, 19288, 8505, 75194, 19, 472, 17, 8276, 53, 11078, 42, 19, 434, 1637, 16, 328, 11604, 18, 13534, 5626, 23, 21, 28333, 5012, 17, 1863, 38067, 19, 20, 16, 4984, 2537, 16, 393, 4239, 45, 16, 17, 14309, 2537, 16, 44188, 41, 18, 47718, 386, 9985, 18, 468, 90106, 39309, 17, 20, 33, 11078, 42, 16, 82052, 49915, 21, 38254, 5491, 16, 15, 425, 19, 38, 828, 16, 422, 6408, 51, 3298, 17, 9630, 1402, 16, 15, 467, 7687, 22, 356, 9389, 33, 451, 3126, 3298, 32907, 52, 10006, 42, 328, 8556, 17, 20, 32, 16, 18, 41790, 47, 18, 431, 13669, 16, 30572, 2537, 23, 26081, 47, 17, 15552, 46107, 17, 16079, 3944, 17, 393, 3298, 19, 42, 17, 33, 730, 8395, 20, 33, 8575, 1220, 17, 18, 74038, 17, 49, 18, 34, 431, 1893, 32, 13339, 4239, 50, 16, 472, 87192, 23, 63644, 16, 26474, 60845, 422, 37325, 16, 547, 11594, 18, 33, 809, 7462, 16, 43, 16, 422, 16591, 19, 17, 434, 57, 35, 16, 50733, 89609, 20, 12169, 38, 10504, 47, 18, 23975, 24, 28667, 17, 444, 88698, 425, 3140, 17, 7284, 38, 19, 23690, 8884, 23, 2274, 47, 22, 547, 13095, 22, 198, 4713, 220, 19, 25, 18572, 5491, 6434, 34, 16, 39309, 19, 20, 11551, 45, 934, 16, 29145, 2537, 17, 32, 547, 11594, 17, 32, 48297, 10504, 17, 328, 11604, 16, 32, 91598, 17, 362, 4728, 19, 34, 27974, 44, 18, 19, 69352, 33, 18, 350, 4493, 33, 21, 11078, 42, 17, 10006, 76180, 17, 32, 17, 29569, 6412, 71328, 18, 362, 6484, 328, 8556, 18, 20, 32, 16, 472, 3846, 17, 39, 17, 11594, 425, 915, 7284, 38, 17, 393, 25674, 16, 6261, 915, 20, 33, 30080, 2916, 16, 393, 5609, 37, 17, 472, 45, 16, 43, 4984, 2537, 4872, 21, 32, 479, 7326, 16, 16, 31640, 49, 17, 42, 27695, 19, 38, 16, 82465, 44, 22, 15, 32, 74574, 26095, 16, 472, 56389, 16, 63612, 7749, 16, 5627, 6412, 17, 9221, 50, 18, 13716, 45, 5626, 16, 431, 1867, 19, 32, 73061, 3588, 45, 17, 393, 1893, 36, 479, 7326, 40, 17, 451, 4656, 51, 24, 6673, 9548, 16, 9256, 953, 434, 11383, 50, 422, 8505, 37, 16, 25692, 1914, 16, 431, 1867, 17, 16, 30904, 952, 19, 43760, 16, 479, 18, 26095, 16, 23975, 24, 28667, 18, 468, 94306, 16, 14773, 45, 37776, 37, 18, 3385, 8973, 16, 41790, 47, 16, 15, 8700, 5381, 16, 26095, 16, 350, 4897, 16, 35, 24, 33, 6261, 90111, 2537, 16, 10315, 42, 16, 451, 953, 37, 17031, 45, 5626, 24, 17031, 30042, 19, 33, 15645, 47, 4656, 16, 69961, 16, 32, 75921, 16, 16, 15, 362, 17048, 1599, 2045, 22, 28333, 5012, 16, 21, 393, 11907, 16, 23975, 1479, 16, 15, 386, 2749, 42, 39309, 17, 20, 32, 30572, 2537, 23, 43, 422, 3021, 350, 3540, 17, 17, 35, 18, 356, 9197, 20, 22, 3928, 1402, 26095, 479, 26227, 6352, 16, 11344, 42, 451, 3021, 17, 6159, 8106, 37, 16, 451, 3124, 24, 18, 61901, 65036, 1863, 54, 16, 15, 8575, 42, 55, 7206, 28668, 16, 3424, 7612, 16, 356, 11242, 57, 24981, 16, 26465, 46, 16, 32, 13534, 7326, 17, 451, 4656, 6484, 18, 19360, 37, 18, 358, 29862, 42, 2537, 92533, 17, 20, 451, 5459, 33, 17, 3928, 55, 26095, 16, 730, 5863, 32, 16, 15, 18, 18, 479, 33342, 20, 3928, 22, 444, 11383, 828, 16, 425, 10994, 39, 431, 5012, 21, 26444, 16, 431, 16381, 20, 6976, 73812, 350, 67023, 18, 19072, 33, 19, 16, 43, 17, 472, 8264, 47, 16, 451, 3124, 21, 17, 506, 55, 1162, 16, 451, 6408, 49608, 33, 16, 18224, 12979, 47, 17, 45316, 3298, 18, 386, 3925, 444, 1914, 16, 24328, 33, 506, 55, 14557, 16, 809, 33539, 21, 431, 21657, 16, 33, 44741, 3919, 16, 434, 1402, 20, 22, 32, 198, 4713, 220, 20, 25, 61687, 386, 17155, 42, 16, 356, 8065, 47, 17, 6826, 1706, 16, 49608, 12335, 17, 43981, 26492, 10098, 17, 31640, 49, 16, 34, 89204, 17, 328, 16680, 47, 17, 2274, 47, 21, 30042, 393, 3021, 17, 350, 4897, 16, 35, 18, 16, 44188, 46, 18, 6976, 31160, 472, 4592, 35, 16, 356, 6610, 16, 27223, 42, 2537, 42, 20, 6826, 5781, 19, 32, 2274, 47, 16, 19, 358, 36332, 17, 26095, 17, 76224, 16, 15, 422, 2034, 47, 16, 16, 350, 44756, 17, 8575, 7123, 730, 5863, 32, 15, 22, 20, 18, 422, 1162, 35, 422, 2034, 47, 21, 451, 1930, 18, 39295, 1911, 350, 26095, 472, 3846, 16, 39, 17, 88307, 393, 15778, 17, 33, 434, 14323, 38137, 1402, 16, 393, 11907, 19, 350, 1162, 45, 16, 17742, 44, 17, 17, 1863, 38067, 16, 18, 16, 730, 2773, 16, 26095, 92851, 21, 49142, 7326, 16, 26095, 17, 10922, 1861, 16, 35, 19, 472, 4592, 33, 16, 11405, 6076, 24, 31640, 33, 358, 36332, 16, 49, 18224, 9389, 17, 444, 20637, 45, 393, 1914, 33, 425, 1890, 18, 80117, 18, 24, 386, 6349, 17, 10006, 76180, 16, 32, 16, 6261, 39, 10777, 37, 17, 13534, 51271, 6434, 18, 26095, 20, 730, 8395, 20, 32, 10006, 21657, 16, 358, 10504, 35, 17, 5588, 40, 17, 22578, 39, 16, 35, 16, 44727, 1715, 18, 31921, 36530, 16, 17, 9630, 39, 20, 328, 8556, 16, 16, 32, 17, 24872, 37881, 18, 11078, 18, 17, 15, 472, 1808, 39, 4984, 3256, 16, 8753, 51326, 22, 32, 16, 10106, 10098, 17, 29145, 10298, 16, 27223, 17, 42, 20, 92851, 20, 479, 1867, 40637, 16, 11685, 828, 49, 16, 350, 32131, 17, 356, 8264, 47, 57, 91750, 45, 16, 29070, 20, 18, 434, 1402, 17, 15, 33, 451, 11419, 17, 43, 17, 9630, 40, 16, 7369, 38, 18, 431, 21657, 16, 17, 22578, 42, 18, 34, 18, 444, 21657, 2537, 16, 422, 2034, 47, 17, 17, 11405, 8412, 16, 15, 393, 19, 2545, 44, 23975, 2716, 20, 730, 2773, 17, 15, 32, 467, 7687, 21, 16, 8700, 12001, 16, 472, 828, 16, 356, 12173, 16, 14137, 19147, 21, 11078, 39, 18, 362, 5865, 356, 7384, 479, 10808, 17, 36, 17, 45728, 19, 422, 1748, 33, 468, 10842, 33, 17, 431, 1867, 16, 16, 37, 3298, 17, 472, 5491, 16, 22, 33, 16, 16, 19360, 33, 21, 431, 97765, 479, 24896, 34995, 828, 16, 44188, 46, 19, 12072, 3090, 17, 43, 451, 1930, 34, 16, 14850, 53, 5609, 19796, 34, 18, 328, 8556, 17, 20, 32, 19, 21, 42760, 8973, 16, 5017, 36530, 16, 39233, 17, 90474, 21, 451, 8626, 45, 4984, 11907, 17, 27974, 16, 8700, 5381, 20, 198, 4713, 220, 21, 25, 32787, 69004, 11344, 16, 18, 5609, 16, 9630, 828, 16, 3034, 17, 479, 7326, 16, 20, 444, 24273, 350, 3399, 29730, 35, 20, 40711, 687, 16, 328, 8556, 20, 32, 21, 431, 1867, 17, 22, 32, 479, 4872, 16, 10315, 47, 17, 36711, 38, 2537, 16, 15552, 58367, 16, 20, 17742, 47, 17, 1863, 38067, 20, 23, 24, 468, 14707, 356, 8264, 23025, 16079, 42, 350, 27188, 16, 30080, 59450, 17, 49, 10292, 5609, 386, 35830, 16, 547, 4239, 16, 19, 32, 328, 11604, 19, 431, 11451, 16, 431, 23818, 32, 14773, 33, 16, 15, 74038, 16, 49, 16, 18, 33, 7369, 16413, 29626, 12979, 647, 5012, 22, 17, 422, 2034, 47, 18, 10315, 37309, 18, 431, 79592, 16, 42760, 3825, 730, 2773, 17, 34, 444, 14557, 434, 1402, 21, 18, 32, 16292, 17, 730, 5863, 32, 15, 16, 15, 15, 44727, 828, 34, 18, 4434, 2537, 16, 16, 72281, 17, 14659, 42916, 17, 393, 8106, 16, 20, 43, 730, 1162, 35, 20, 431, 969, 33, 6826, 1317, 17, 1863, 38067, 18, 16, 23, 393, 7498, 49, 468, 1479, 451, 26998, 33, 5863, 18224, 34, 24977, 16, 393, 26998, 43, 472, 1570, 16, 23229, 52, 16, 11078, 20, 23, 809, 3617, 5262, 16, 431, 16522, 17, 13534, 5626, 23, 20, 33, 46180, 16208, 47, 18, 17258, 8093, 43, 16, 42217, 16, 362, 28633, 16, 431, 2537, 16, 38, 2537, 33414, 17, 784, 16, 5752, 29923, 16, 18572, 7984, 425, 51840, 17, 422, 16591, 16, 15, 8575, 19701, 19, 18224, 43, 24, 13716, 1808, 18, 467, 8485, 16, 27695, 19, 8264, 47, 16, 356, 953, 1740, 15008, 39, 350, 3298, 42793, 48523, 17, 74038, 17, 49, 20, 32, 23403, 46737, 23, 358, 29862, 29862, 393, 4835, 3298, 16, 66556, 20, 50, 328, 8556, 18, 22, 32, 19, 362, 3825, 87320, 45, 18, 22578, 42, 18, 49, 19, 647, 2537, 33, 468, 15653, 16, 18224, 12979, 47, 356, 14065, 19, 468, 6484, 431, 5012, 20, 82465, 44, 18, 19, 422, 10842, 17, 31640, 38, 17, 95858, 77020, 18, 7531, 49064, 16, 1599, 17896, 1740, 47, 16, 49521, 42, 16, 27223, 22, 393, 7863, 19, 14137, 3706, 20, 27223, 18, 42, 19, 29569, 3617, 16, 25735, 17, 33, 16, 2100, 59450, 22, 328, 868, 7347, 18, 13534, 8065, 18, 12932, 867, 17, 96966, 17, 38, 16, 20, 45414, 16128, 17, 17924, 55, 16, 16, 444, 21657, 16, 15, 75083, 20117, 17, 30923, 3298, 16, 29717, 16, 2274, 47, 16, 386, 3617, 14596, 17, 14773, 17563, 16, 12072, 47, 16, 198, 4713, 220, 22, 25, 22884, 37, 16, 472, 20252, 16, 6826, 45, 16, 92127, 8598, 29569, 33, 20, 21, 16, 422, 12335, 51267, 44727, 828, 34, 19, 647, 8093, 18, 9256, 13649, 23975, 2716, 16, 16, 15, 40026, 2828, 16, 11078, 17155, 17, 32, 468, 9951, 16, 350, 23025, 20, 17, 43, 17, 431, 4406, 18, 23, 29850, 1317, 8575, 64638, 48, 468, 2668, 18, 328, 30465, 16524, 39864, 50, 687, 18, 23975, 2716, 16, 15, 24, 393, 20637, 16, 89204, 16, 11405, 6076, 16, 15, 472, 17845, 9420, 5609, 11078, 5049, 19, 431, 8041, 18, 434, 30498, 16, 479, 15665, 19, 20, 33, 15645, 34, 21, 66186, 8065, 17, 35, 13339, 30042, 17, 358, 640, 18, 434, 3126, 6826, 5781, 21, 29850, 7376, 1863, 38067, 20, 23, 21, 356, 20, 434, 13485, 17, 479, 4485, 17, 422, 7783, 17, 24311, 19147, 17, 40026, 2069, 16, 386, 14884, 17, 34, 13534, 38067, 14659, 26444, 16, 13716, 934, 6484, 17, 451, 26998, 33, 5371, 356, 3140, 17, 1964, 4406, 16, 3928, 42, 16, 15, 13534, 3944, 17, 31921, 55, 46, 16, 16, 13339, 30042, 16, 14137, 19147, 19, 75007, 16, 96316, 934, 472, 1898, 640, 17, 358, 44676, 8412, 47, 17, 393, 8106, 22, 386, 19363, 45, 16, 4063, 78961, 19, 55872, 16208, 18, 49521, 42, 17, 328, 8556, 16, 32, 19, 42254, 33, 16, 41790, 47, 17, 11344, 19, 49, 32787, 55, 17, 24, 434, 11451, 17, 3928, 18, 38, 969, 20, 11344, 16, 33, 66556, 21, 53, 15, 33, 3928, 2537, 17, 472, 87192, 16, 32, 27223, 42, 16, 18, 8575, 42, 1890, 17, 7284, 52466, 18572, 9745, 969, 16, 431, 21657, 23, 16079, 6140, 49, 18, 27223, 42, 2537, 42, 18, 10315, 37309, 16, 10584, 1793, 24, 2100, 46, 16, 15, 328, 8556, 17, 20, 32, 16, 19, 358, 29862, 3390, 74150, 24, 32, 472, 28014, 17, 468, 36332, 328, 8556, 18, 20, 37, 17, 468, 1285, 16, 32, 422, 2034, 47, 16, 19, 393, 3257, 16, 16, 32, 31921, 55, 46, 22, 13534, 7326, 16, 3596, 9197, 20, 451, 26998, 33, 3256, 356, 17, 6484, 17, 12200, 5350, 16, 393, 7268, 16, 48297, 10504, 19, 468, 26095, 393, 26227, 425, 3140, 22, 33, 31866, 86005, 2916, 32, 16, 79987, 16, 479, 6029, 41790, 47, 22, 647, 5012, 17, 23, 350, 1317, 1402, 16, 12878, 19100, 1863, 51326, 22455, 21, 1599, 26095, 16, 84246, 26095, 16, 19, 479, 7326, 40, 16, 20869, 1511, 16, 27974, 40449, 350, 80878, 18, 8575, 49389, 328, 2828, 1093, 16, 350, 828, 31264, 17, 92851, 16, 198, 4713, 220, 23, 25, 26101, 45, 16, 3928, 55, 26095, 17, 479, 9654, 16, 393, 4239, 7380, 362, 2045, 36, 44550, 7380, 16, 21, 32, 13984, 47, 3981, 16, 30250, 59450, 20, 393, 16524, 1791, 16, 6261, 39, 10777, 37, 16, 17, 8753, 5865, 32, 27931, 57, 17, 386, 1402, 12335, 16, 730, 5863, 32, 15, 18, 20, 20, 19288, 1402, 16, 356, 17, 6484, 17, 43, 31512, 33, 468, 17, 37, 17, 350, 20117, 19, 356, 14903, 45, 451, 26998, 33, 17, 356, 13095, 16, 730, 952, 4984, 1402, 17, 5308, 50, 16, 18803, 5049, 16, 434, 3126, 43, 16, 730, 2773, 16, 19, 9256, 1890, 19, 350, 89755, 11078, 42, 21, 3928, 21, 38, 969, 45, 1706, 17, 30080, 55, 17, 393, 4239, 45, 21, 11405, 8412, 23, 8575, 42, 6484, 10584, 9548, 18, 1964, 4406, 19, 33, 356, 13095, 18, 47391, 90814, 16, 24981, 20, 33, 479, 17088, 444, 3585, 18, 26474, 38, 3627, 30250, 59450, 16, 15, 8575, 42, 2149, 25578, 16, 32, 16, 393, 19, 17020, 17, 95034, 2537, 362, 7687, 33, 17, 468, 8626, 16, 18224, 92963, 74150, 20, 16, 34, 479, 4485, 18, 422, 3506, 17, 29850, 7581, 9630, 3021, 18, 328, 4406, 16, 422, 24273, 27404, 18, 49510, 362, 1511, 26444, 8753, 31464, 24591, 6126, 20, 5190, 3126, 37, 16, 27975, 9630, 57063, 20, 451, 3126, 18, 48483, 3140, 17, 21084, 76180, 16, 328, 2828, 8556, 17, 26492, 10098, 18, 350, 36332, 13095, 17, 328, 16, 15, 15, 32, 19, 39295, 18, 34, 16, 425, 5576, 17, 472, 17845, 9420, 4835, 431, 1706, 17, 56111, 10504, 431, 2916, 18, 24, 43, 39310, 39, 16, 386, 5459, 16, 393, 2954, 23, 425, 15778, 32834, 44, 17, 26474, 5863, 20, 328, 30521, 18, 425, 13485, 1799, 19, 15, 67710, 13485, 17, 16, 472, 10531, 55, 16, 434, 1911, 11405, 7462, 16, 393, 11907, 21, 444, 38100, 18, 19288, 1402, 18, 86005, 23652, 16, 89887, 51326, 7531, 55970, 18, 19370, 16522, 17, 356, 8264, 8041, 24981, 18, 619, 32841, 17, 23463, 45, 13534, 8065, 16, 151645, 198]
+[INFO:swift] [INPUT] <|im_start|>system
+You are an AI expert in transcriptomic perturbation analysis. Your task is to predict the complete target gene sets for consecutive expression blocks after a given perturbation. Each block contains 125 genes. Keep the genes within each output block in the same relative order as they appear in the baseline control expression.<|im_end|>
+<|im_start|>user
+[Condition]
+Cell line: NEU
+Perturbation type: drug
+Perturbation name: N/A
+SMILES: CO[C@H]1CN(C)C(=O)c2cc(NC(=O)Nc3cccc(OC)c3)ccc2OC[C@@H](C)N(CC2CC2)C[C@@H]1C
+Treatment time: 24 h
+
+[Control Expression]
+FKBP4 RPS6 GRB7 ARNT2 DNAJA3 APP GNAS PXN HMGCS1 NVL CCNB1 MEST PLA2G4A ZNF395 DNMT1 GMNN USP22 RAI14 SOX4 ORC1 MLLT11 PUF60 EXT1 TRIB3 FAM69A SHB RPN1 CSNK1E PMM2 STUB1 MAT2A CD44 HTATSF1 RFNG FDFT1 PCNA PGRMC1 PLEKHM1 SOX2 PSMD2 SPRED2 TERF2IP PAPD7 UBE2L6 C2CD5 HIF1A VDAC1 HSPA4 SLC27A3 STK25 RNPS1 TRIM2 IPO13 LRRC41 CDC20 RALGDS EPHA3 CAMSAP2 ZMIZ1 BPHL SNCA ADGRG1 PTPRK SCAND1 TES ABCF1 PAFAH1B3 PTK2 NIT1 EVL RHEB PSMD4 CDKN1B TIMM17B BUB1B STMN1 PRKACA PTPRF MBOAT7 CAST PSMF1 HMGCR CTNND1 HACD3 BAX KLHDC2 COG7 PGAM1 MKNK1 METRN SUPV3L1 CRKL PIK3CA CLIC4 SNX13 CTSD ATP11B SHC1 TP53BP2 NPRL2 CALM3 TCEA2 CIRBP FSD1 RNH1 MTFR1 GSTZ1 FBXO21 MLEC JUN TIMELESS MIF CISD1 SYPL1 AKT1 ECH1 CNDP2 TESK1 ACAT2 BLCAP CXCR4 NCAPD2 UBE2C LSM5 ABL1 PAFAH1B1 HDAC2 CHAC1 NISCH NPEPL1 CDK7 NARFL TNFRSF21 PIN1 CLTC DNAJB6 CRELD2 PARP1 PSIP1 SCRN1 EDN1 SMARCC1 NR2F6 PSME2 TRIM13 ALAS1 PLEKHJ1 ELAC2 NT5DC2 CDC45 CPSF4 DNMT3A ACLY OXA1L EFCAB14 MTF2 ETFB MRPL12 CANT1 RUVBL1 ATP1B1 IFNAR1 LBR PPP2R5E MACF1 TXLNA TFAP2A NUSAP1 GLOD4 RAB31 UGDH CAT SLC2A6 EPN2 PSRC1 UBE2A IGF2R GTF2A2 FAT1 FGFR2 MSH6 TMEM97 ERBB2 COPB2 GADD45A VGLL4 CHERP TXNRD1 SMC1A NUP85 HMG20B POLR1C MPC2 ENOPH1 MTA1 RTN2 CIAPIN1 PAF1 DHDDS POLR2I ARL4C PCMT1 NUP133 CLSTN1 SNX7 IL13RA1 SQSTM1 SMARCA4 RBM34 DERA HTRA1 CD40 PIK3C2B COL4A1 TMEM50A CPNE3 MMP2 FZD7 KIAA0196 LPAR2 PLCB3 TLK2 DFFA COPS7A RBM6 TUBB6 DNM1L CDK2 UBE2J1 CSNK2A2 ATP6V1D KAT6A CYCS AKR7A2 LAP3 TCERG1 ACD SSBP2 SLC35A1 CDC42 SDHB TRAPPC3 HIST2H2BE USP6NL CCDC92 NPDC1 MAP4K4 NOTCH1 BID STX4 TSPAN4 UFM1 GTPBP8 PCK2 CDK19 PPOX COG2 TBC1D31 FOXO3 PWP1 TCEAL4 CLTB IARS2 HSPD1 PTPN1 PHGDH PKIG CHP1 ITGAE CCNB2 TLE1 ARID5B RPA2 PLOD3 TBPL1 MAPKAPK5 TIMM9 DHRS7 SACM1L BZW2 RRAGA STX1A NSDHL KIF5C FUT1 NIPSNAP1 KEAP1 ARPP19 HDAC6 ANKRD10 AURKB ADAT1 FYN NCK1 PRAF2 CHMP4A SUZ12 RFC5 PCCB TSPAN6 CRK HN1L USP14 ID2 NCOA3 IGF2BP2 GNA15 UBE3C RBM15B TRAPPC6A KTN1 MYO10 SCCPDH LYN GNA11 MAPK1IP1L POLR2K NMT1 EIF4G1 MAPK9 CERK TCTA ZNF274 CAPN1 KAT6B CASC3 PXMP2 TEX10 TOMM70A GLRX TMCO1 HSD17B10 TARBP1 HYOU1 PHKB EIF5 EZH2 ELOVL6 TERT DAXX WDTC1 GOLT1B SOCS2 KLHL9 SNX6 TOPBP1 NUP88 CDKN1A WIPF2 CHN1 KIAA0907 DUSP11 TSEN2 PRCP PIK3R3 INTS3 GDPD5 SMNDC1 KIAA0753 RAB4A BAMBI DUSP4 ATP2C1 ICMT BMP4 AXIN1 H2AFV DCTD UBQLN2 BNIP3L CDK4 PPIE DUSP6 FIS1 ZFP36 RPA1 GNAI2 MAPKAPK2 SMC3 NUDT9 SLC5A6 CCDC86 MRPS2 VAT1 ZNF451 NOL3 PCBD1 NRAS CYB561 TRAP1 TBP RAB27A HIST1H2BK PTK2B PTPN12 DRAP1 SPEN FPGS DMTF1 FAIM TIAM1 FOXJ3 INSIG1 RAB21 PAK4 DDIT4 ZMYM2 NRIP1 BAD GPC1 TP53BP1 DDR1 DLD PLP2 TCTN1 MCM3 IQGAP1 SPR EPRS G3BP1 DNAJC15 TIMP2 TM9SF3 ZNF589 EDEM1 TIMM22 CDC25B ZNF131 KIF1BP NFATC4 GRN WASF3 ATF6 CDK1 DECR1 EAPP CASP10 EBNA1BP2 CEBPD JMJD6 VAV3 ARID4B SYK ITGB1BP1 NR1H2 TBC1D9B ARHGAP1 MFSD10 PLK1 DCUN1D4 NENF TJP1 TBXA2R HSPB1 B4GAT1 PSMD9 POLB IGF1R MSRA DNTTIP2 ADAM10 TXNDC9 MYBL2 TXNL4B HERPUD1 SPAG7 LGMN WDR7 TOR1A CCP110 PIGB BAG3 CBLB TMEM2 AARS SLC25A4 CAB39 MAST2 CSNK1A1 NOSIP MALT1 ARHGEF2 UTP14A SMC4 XPO7 MRPS16 RRS1 CCNH ARFIP2 RHOA PAK1 CALU SH3BP5 GRB10 SPDEF PPP1R13B TMEM110 CSK SLC25A13 MRPL19 TMED10 KDM5A ATMIN SGCB CASP3 MTERF3 MELK CSRP1 IFRD2 GFPT1 GLI2 CDC25A AKAP8L DCK PIH1D1 RAE1 AKAP8 NFIL3 FBXL12 VPS72 ADH5 SLC11A2 CNPY3 CD320 HADH DUSP3 TRIB1 ALDH7A1 APBB2 TFDP1 TSC22D3 CEP57 PDS5A STAMBP MAP2K5 PLSCR3 ATF5 PARP2 GNPDA1 CDKN2A RASA1 APPBP2 GABPB1 ILK PYGL HEATR1 NCK2 TWF2 DNAJB2 KIF2C LSR CGRRF1 TOP2A NUP93 CEBPZ STXBP2 PNKP ZW10 FAM63A SYNE2 PRKX SESN1 TP53 PIP4K2B KDM5B RNF167 ETS1 PRSS23 PPP2R3C GPER1 BECN1 TPD52L2 FAM20B ME2 NFE2L2 ISOC1 RPIA MBTPS1 ADI1 SLC35B1 HSPA8 TPM1 ATG3 KIAA0100 PDHX SENP6 CRYZ NFATC3 DNM1 RRP12 PIK3C3 LRPAP1 THAP11 CDK5R1 DUSP22 PSMB10 RPP38 PPIC PAN2 P4HTM TMEM5 STAT1 KIF20A WDR61 PHKG2 PRR15L ITFG1 RNMT KCTD5 CORO1A BIRC5 RALB CCNA2 NUDCD3 UBE3B YME1L1 HAT1 CREG1 CHIC2 ABHD6 ZNF318 PECR CDH3 EED ADO DNAJB1 PRKCQ PSMG1 EML3 DDX42 ABCF3 FZD1 IKBKAP CASK SNAP25 PTPRC NUCB2 SQRDL STXBP1 PACSIN3 NFKBIA TMEM109 MYC NET1 PFKL GTF2E2 APOE POP4 KIAA1033 HES1 RSU1 CD58 YTHDF1 FASTKD5 GNB5 RGS2 CCDC85B DFFB PGM1 MMP1 EPHB2 IGFBP3 ELAVL1 ST7 HK1 PSMD10 RAB11FIP2 LPGAT1 ACAA1 RAP1GAP HDGFRP3 HSD17B11 HLA-DRA LRRC16A TM9SF2 ABCB6 RALA SERPINE1 HS2ST1 LIPA GALE ASAH1 HOXA5 CDCA4 BLMH RPA3 RPS6KA1 RFX5 FCHO1 CTSL BIRC2 GADD45B HERC6 MNAT1 DENND2D MPZL1 PDLIM1 DDX10 MBNL2 IER3 PRPF4 FOS MYL9 CLPX CHMP6 PPARD BCL2 SMAD3 ARHGEF12 ZNF586 C5 TSPAN3 WFS1 EIF4EBP1 COG4 FHL2 GATA2 ALDOA DSG2 EPB41L2 HEBP1 S100A13 AMDHD2 FOXO4 GFOD1 MEF2C CENPE CCNF FAH SKIV2L PHKA1 TIPARP NUP62 SMARCD2 OXCT1 SCP2 NNT NFKBIE CCL2 PPP2R5A INPP1 CREB1 NOLC1 LGALS8 STK10 CCNE2 FBXO11 FEZ2 MYCBP2 IKBKB SUV39H1 MBNL1 PMAIP1 ABHD4 GPATCH8 ATP5S PCM1 CFLAR HOMER2 MAMLD1 SLC37A4 IGHMBP2 PRR7 KIAA0355 MCOLN1 AGL EXOSC4 TGFB3 CHEK2 CETN3 SLC1A4 PIK3R4 VAPB ETV1 ICAM1 C2CD2L MYCBP BLVRA CNOT4 ECD SATB1 ASCC3 RPS5 SLC25A46 CASP2 PYCR1 IL4R DHX29 FRS2 USP7 ST3GAL5 IL1B TOMM34 ATP6V0B RELB BNIP3 UBR7 DPH2 POLG2 DYRK3 STAP2 HSPA1A LOXL1 RFC2 MAPK13 SCARB1 XPNPEP1 PRKAG2 E2F2 CHEK1 MAP7 COASY CTNNAL1 RRP8 POLD4 LSM6 NGRN SYNGR3 MAPKAPK3 PLSCR1 ACOT9 TRAK2 ABCC5 ANO10 MAP3K4 SLC25A14 TLR4 IKBKE CTTN CYTH1 RAD9A RB1 HOOK2 KDM3A MOK EGF LIG1 NFKB2 WRB SLC35F2 ERO1A DUSP14 CBR1 PEX11A ITGB5 KIT OXSR1 YKT6 MAN2B1 ANXA7 FBXO7 TRAM2 CCNA1 SORBS3 PROS1 BRCA1 REEP5 NFKBIB FOSL1 C2CD2 HPRT1 KIF14 CCND3 POLE2 PLS1 FGFR4 PLA2G15 RRP1B MICALL1 SPAG4 TSKU CDK6 ST6GALNAC2 TBX2 EBP PNP PTPN6 BCL7B HMGA2 MVP SNX11 PSMB8 PRKCD ACBD3 INPP4B CBR3 IKZF1 LYPLA1 STAT5B GHR LRP10 FAM57A DAG1 LAGE3 KDELR2 PDGFA TNIP1 GAA HOXA10 CASP7 VPS28 PRKCH TICAM1 COL1A1 P4HA2 NPC1 SLC35A3 USP1 CRTAP ADRB2 EGR1 MYLK MTHFD2 PAICS ZDHHC6 XBP1 RAD51C GATA3 FKBP14 GNAI1 DDB2 PPARG MCUR1 ADCK3 SPP1 DYNLT3 SRC GRWD1 AURKA ALDOC TCFL5 RBKS ENOSF1 TSTA3 IDE ADGRE5 NOS3 SKP1 PRUNE CXCL2 SPTAN1 KCNK1 SPTLC2 ERBB3 TGFBR2 S100A4 NR3C1 BACE2 HLA-DMA RAC2 TATDN2 EGFR RPL39L BDH1 MUC1 PAX8 BTK ATF1 GSTM2 PDIA5 SIRT3 BHLHE40 KLHL21 HMOX1 FAS PSME1 PAK6 LAMA3 ICAM3 LYRM1 GAPDH SCYL3 PTGS2 CEBPA STAT3 JADE2 SFN CCND1<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+Block 1: FKBP4 RPS6 GRB7 ARNT2 DNAJA3 APP GNAS PXN HMGCS1 NVL CCNB1 MEST PLA2G4A DNMT1 GMNN USP22 RAI14 SOX4 ORC1 MLLT11 PUF60 EXT1 TRIB3 FAM69A SHB RPN1 CSNK1E PMM2 STUB1 MAT2A CD44 HTATSF1 RFNG FDFT1 PCNA PGRMC1 SOX2 PSMD2 TERF2IP PAPD7 UBE2L6 HIF1A HSPA4 STK25 RNPS1 TRIM2 LRRC41 CDC20 RALGDS EPHA3 CAMSAP2 ZMIZ1 SNCA ADGRG1 PTPRK ABCF1 PAFAH1B3 PTK2 NIT1 RHEB CDKN1B TIMM17B BUB1B STMN1 HMGCR CTNND1 HACD3 KLHDC2 COG7 PGAM1 PIK3CA CLIC4 TCEA2 CIRBP FSD1 MLEC MIF ECH1 BLCAP CXCR4 UBE2C LSM5 PAFAH1B1 HDAC2 NISCH PIN1 CLTC DNAJB6 SMARCC1 ALAS1 PLEKHJ1 NT5DC2 OXA1L MTF2 ETFB CANT1 ATP1B1 TXLNA EPN2 PSRC1 TXNRD1 ENOPH1 MTA1 RTN2 CD40 CPNE3 FZD7 UBE2J1 CDC42 NPDC1 NOTCH1 PPOX PHGDH CCNB2 TIMM9 DHRS7 HDAC6 TCTA TMCO1 RPA1 ZMYM2 TOP2A RNF167 SUV39H1 SLC35A3
+Block 2: ZNF395 PLEKHM1 SPRED2 C2CD5 SLC27A3 TES EVL PRKACA PTPRF MBOAT7 BAX SUPV3L1 CRKL ATP11B TP53BP2 RNH1 FBXO21 JUN CISD1 SYPL1 AKT1 TESK1 ACAT2 ABL1 NPEPL1 TNFRSF21 PARP1 PSIP1 SCRN1 PSME2 TRIM13 ELAC2 CPSF4 ACLY MRPL12 RUVBL1 LBR PPP2R5E GLOD4 RAB31 UGDH SLC2A6 IGF2R GTF2A2 MSH6 COPB2 GADD45A VGLL4 CHERP HMG20B CIAPIN1 POLR2I PCMT1 NUP133 CLSTN1 SMARCA4 PIK3C2B COL4A1 TMEM50A KIAA0196 TLK2 COPS7A DNM1L ATP6V1D KAT6A AKR7A2 TCERG1 SDHB TRAPPC3 TSPAN4 UFM1 IARS2 PKIG TLE1 SACM1L NSDHL KIF5C ARPP19 ANKRD10 SUZ12 UBE3C RBM15B KTN1 MYO10 SCCPDH MAPK1IP1L CASC3 PXMP2 GLRX HSD17B10 PHKB EIF5 EZH2 DAXX GOLT1B KLHL9 NUP88 KIAA0907 PIK3R3 BNIP3L ZFP36 MAPKAPK2 VAT1 NRIP1 TP53BP1 ARID4B NR1H2 SPAG7 TMEM2 SLC25A4 ARFIP2 MRPL19 MTERF3 PDS5A APPBP2 SLC35B1 SENP6 CDK5R1 RNMT BIRC5 DNAJB1 PSMG1 MPZL1 S100A13 KDM3A
+Block 3: VDAC1 IPO13 BPHL SCAND1 PSMD4 PSMF1 METRN SNX13 NPRL2 CALM3 MTFR1 GSTZ1 TIMELESS NCAPD2 CDK7 NARFL EDN1 NR2F6 DNMT3A EFCAB14 NUSAP1 FAT1 TMEM97 NUP85 PAF1 SNX7 SQSTM1 DERA LPAR2 DFFA RBM6 CCDC92 MAP4K4 STX4 GTPBP8 CDK19 TCEAL4 PTPN1 ITGAE RPA2 PLOD3 BZW2 RRAGA STX1A FUT1 NIPSNAP1 KEAP1 AURKB FYN NCK1 RFC5 PCCB TSPAN6 CRK NCOA3 NMT1 MAPK9 CERK ZNF274 KAT6B ELOVL6 SNX6 TOPBP1 CDKN1A WIPF2 DUSP4 ATP2C1 ICMT BMP4 H2AFV CDK4 FIS1 SMC3 CCDC86 MRPS2 ZNF451 TRAP1 PTPN12 DRAP1 FOXJ3 BAD MCM3 EPRS CDC25B CDK1 JMJD6 MFSD10 B4GAT1 DNTTIP2 ADAM10 WDR7 CBLB NOSIP CALU CSK SLC25A13 CASP3 RAE1 AKAP8 PARP2 DNAJB2 SYNE2 PIP4K2B KDM5B PRSS23 PPP2R3C RPIA MBTPS1 HSPA8 TPM1 PDHX DNM1 UBE3B YME1L1 DDX42 FZD1 FASTKD5 HDGFRP3 TM9SF2 LIPA BCL2 COG4 GPATCH8 USP7 UBR7
+Block 4: CTSD SHC1 CDC45 IFNAR1 TFAP2A UBE2A FGFR2 SMC1A MPC2 ARL4C RBM34 PLCB3 TUBB6 CDK2 CSNK2A2 CYCS LAP3 ACD SLC35A1 HIST2H2BE BID COG2 PWP1 ARID5B TBPL1 PRAF2 HN1L TRAPPC6A GNA11 POLR2K EIF4G1 TOMM70A TARBP1 HYOU1 WDTC1 SOCS2 INTS3 SMNDC1 RAB4A UBQLN2 PPIE GNAI2 NUDT9 PCBD1 SPEN FPGS DMTF1 INSIG1 RAB21 DDIT4 DDR1 G3BP1 TM9SF3 EDEM1 GRN WASF3 DECR1 CASP10 ITGB1BP1 TBC1D9B ARHGAP1 PLK1 NENF TXNDC9 TXNL4B HERPUD1 TOR1A CCP110 AARS XPO7 MRPS16 PAK1 TMED10 MELK CDC25A AKAP8L DCK TSC22D3 CEP57 STAMBP GNPDA1 ILK NCK2 CGRRF1 NUP93 PNKP ZW10 PRKX BECN1 ISOC1 CRYZ STAT1 CORO1A CCNA2 NUDCD3 ABCF3 IKBKAP SNAP25 NUCB2 STXBP1 KIAA1033 GNB5 ST7 LPGAT1 BLMH RPS6KA1 RFX5 CLPX TSPAN3 EPB41L2 HEBP1 NUP62 OXCT1 NNT CREB1 MYCBP2 BNIP3 MOK LIG1 WRB OXSR1 YKT6 RRP1B MICALL1 FAM57A
+Block 5: CAST MKNK1 CNDP2 CHAC1 CRELD2 CAT ERBB2 POLR1C MMP2 SSBP2 USP6NL PCK2 TBC1D31 FOXO3 CLTB HSPD1 CHP1 MAPKAPK5 CHMP4A USP14 IGF2BP2 TEX10 DUSP11 TSEN2 PRCP KIAA0753 DCTD DUSP6 NOL3 NRAS TBP HIST1H2BK PTK2B FAIM TIAM1 PAK4 TCTN1 TIMM22 ZNF131 KIF1BP ATF6 EBNA1BP2 DCUN1D4 HSPB1 PSMD9 POLB IGF1R MYBL2 LGMN PIGB BAG3 CAB39 MAST2 CSNK1A1 ARHGEF2 CCNH SH3BP5 KDM5A CSRP1 IFRD2 GLI2 PIH1D1 NFIL3 FBXL12 ADH5 SLC11A2 CNPY3 CD320 HADH TRIB1 ALDH7A1 APBB2 TFDP1 MAP2K5 ATF5 GABPB1 HEATR1 TWF2 CEBPZ SESN1 TP53 FAM20B NFE2L2 ADI1 ATG3 RRP12 PIK3C3 LRPAP1 DUSP22 PSMB10 P4HTM TMEM5 KIF20A WDR61 ITFG1 HAT1 CREG1 ABHD6 CDH3 ADO CASK GTF2E2 POP4 DFFB EPHB2 RAB11FIP2 HSD17B11 ABCB6 RALA GALE MNAT1 FOXO4 SKIV2L NOLC1 BLVRA ASCC3 SLC25A46 PYCR1 LOXL1 RFC2 LSM6 NGRN TRAK2 RB1 ITGB5
+Block 6: DHDDS IL13RA1 ADAT1 ID2 GNA15 LYN TERT GDPD5 AXIN1 SLC5A6 RAB27A GPC1 PLP2 IQGAP1 DNAJC15 TIMP2 ZNF589 EAPP CEBPD SYK TJP1 TBXA2R MSRA MALT1 UTP14A SMC4 RRS1 RHOA GRB10 PPP1R13B ATMIN SGCB VPS72 DUSP3 PLSCR3 RASA1 PYGL KIF2C LSR FAM63A ME2 KIAA0100 NFATC3 THAP11 PAN2 PHKG2 PRR15L KCTD5 RALB CHIC2 ZNF318 PECR EED NFKBIA MYC NET1 PFKL HES1 RSU1 CD58 YTHDF1 RGS2 CCDC85B IGFBP3 ELAVL1 HK1 ACAA1 RAP1GAP HS2ST1 ASAH1 CTSL BIRC2 DDX10 PRPF4 MYL9 SMAD3 WFS1 EIF4EBP1 CENPE FAH TIPARP SCP2 PPP2R5A LGALS8 IKBKB PMAIP1 ATP5S SLC37A4 AGL CETN3 PIK3R4 VAPB ETV1 MYCBP CNOT4 ECD RPS5 TOMM34 DPH2 POLG2 DYRK3 SCARB1 XPNPEP1 CHEK1 MAP7 POLD4 ABCC5 MAP3K4 CYTH1 MAN2B1 ANXA7 SORBS3 CCND3 POLE2 PLA2G15 HMGA2 SNX11 LRP10 KDELR2 TNIP1 NPC1 USP1 MTHFD2 GRWD1 SKP1
+Block 7: MACF1 HTRA1 CHN1 BAMBI CYB561 DLD SPR NFATC4 VAV3 SPDEF TMEM110 GFPT1 CDKN2A ETS1 TPD52L2 RPP38 PPIC PRKCQ EML3 SQRDL PACSIN3 TMEM109 PGM1 MMP1 PSMD10 HLA-DRA CDCA4 RPA3 FCHO1 GADD45B HERC6 DENND2D MBNL2 IER3 FOS CHMP6 PPARD ZNF586 C5 FHL2 GATA2 DSG2 AMDHD2 GFOD1 MEF2C CCNF PHKA1 SMARCD2 NFKBIE CCL2 INPP1 STK10 CCNE2 FBXO11 MBNL1 ABHD4 PCM1 CFLAR HOMER2 IGHMBP2 PRR7 MCOLN1 EXOSC4 TGFB3 CHEK2 SLC1A4 SATB1 CASP2 IL4R DHX29 FRS2 ST3GAL5 IL1B ATP6V0B STAP2 HSPA1A MAPK13 PRKAG2 COASY CTNNAL1 RRP8 SYNGR3 MAPKAPK3 PLSCR1 ACOT9 ANO10 SLC25A14 IKBKE RAD9A HOOK2 EGF SLC35F2 ERO1A DUSP14 PEX11A FBXO7 CCNA1 REEP5 NFKBIB C2CD2 HPRT1 PLS1 FGFR4 EBP PNP BCL7B MVP LYPLA1 DAG1 GAA CASP7 VPS28 TICAM1 PAICS ZDHHC6 XBP1 FKBP14 GNAI1 MCUR1 RBKS TSTA3 PRUNE SPTAN1 TATDN2 ATF1
+Block 8: CAPN1 STXBP2 GPER1 PTPRC APOE LRRC16A SERPINE1 HOXA5 PDLIM1 ARHGEF12 ALDOA FEZ2 MAMLD1 KIAA0355 ICAM1 C2CD2L RELB E2F2 TLR4 CTTN NFKB2 CBR1 KIT TRAM2 PROS1 BRCA1 FOSL1 KIF14 SPAG4 TSKU CDK6 ST6GALNAC2 TBX2 PTPN6 PSMB8 PRKCD ACBD3 INPP4B CBR3 IKZF1 STAT5B GHR LAGE3 PDGFA HOXA10 PRKCH COL1A1 P4HA2 CRTAP ADRB2 EGR1 MYLK RAD51C GATA3 DDB2 PPARG ADCK3 SPP1 DYNLT3 SRC AURKA ALDOC TCFL5 ENOSF1 IDE ADGRE5 NOS3 CXCL2 KCNK1 SPTLC2 ERBB3 TGFBR2 S100A4 NR3C1 BACE2 HLA-DMA RAC2 EGFR RPL39L BDH1 MUC1 PAX8 BTK GSTM2 PDIA5 SIRT3 BHLHE40 KLHL21 HMOX1 FAS PSME1 PAK6 LAMA3 ICAM3 LYRM1 GAPDH SCYL3 PTGS2 CEBPA STAT3 JADE2 SFN CCND1<|im_end|>
+
+[INFO:swift] [LABELS_IDS] [-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 151667, 271, 151668, 271, 4713, 220, 16, 25, 84246, 26095, 19, 431, 5012, 21, 14773, 33, 22, 6261, 6408, 17, 15552, 44180, 18, 17912, 479, 34496, 55484, 45, 472, 31939, 6412, 16, 24458, 43, 13534, 33342, 16, 386, 5177, 96966, 17, 38, 19, 32, 60656, 8505, 16, 19172, 9745, 2274, 47, 17, 17, 431, 15469, 16, 19, 5627, 55, 19, 2726, 34, 16, 386, 4086, 51, 16, 16, 393, 20538, 21, 15, 33757, 16, 4984, 3256, 18, 434, 1402, 21, 24, 32, 6434, 33, 431, 17896, 16, 10006, 76180, 16, 36, 5851, 44, 17, 3928, 4493, 16, 24795, 17, 32, 11078, 19, 19, 5260, 828, 28667, 16, 22060, 6140, 35318, 3994, 16, 6673, 7326, 393, 8626, 11604, 16, 5627, 55, 17, 11405, 6076, 17, 48848, 37, 17, 3298, 393, 2537, 35, 22, 547, 11594, 17, 43, 21, 472, 2773, 16, 32, 472, 87192, 19, 3928, 42, 17, 20, 45816, 5012, 16, 4984, 1791, 17, 44550, 7380, 19, 16, 39309, 17, 15, 431, 969, 38, 5936, 468, 28222, 18, 28297, 50, 2537, 17, 1863, 44, 2843, 16, 17924, 5049, 9630, 8626, 38, 16, 393, 4239, 77020, 19360, 37, 16, 12878, 3627, 39, 16, 33, 18, 393, 15778, 17, 451, 952, 16, 431, 1799, 33, 11078, 17155, 16, 33, 17742, 44, 16, 22, 33, 425, 4493, 16, 33, 47173, 45, 16, 472, 31939, 8973, 18572, 45, 8065, 16, 472, 1706, 35, 18, 67710, 39, 5626, 17, 7284, 38, 22, 30044, 1402, 16, 22578, 42, 18, 5049, 6976, 1317, 19, 350, 2104, 32, 17, 356, 2801, 26095, 434, 5491, 16, 386, 84130, 386, 2773, 468, 2149, 16, 425, 8556, 2537, 48483, 8973, 19, 547, 11594, 17, 34, 90474, 20, 12878, 3627, 39, 16, 33, 16, 12169, 1706, 17, 451, 1637, 2149, 27129, 16, 6976, 7749, 15552, 46107, 21, 13716, 934, 3706, 16, 8753, 1911, 16, 393, 867, 75729, 41, 16, 17658, 20, 5626, 17, 506, 59450, 16, 43, 386, 10808, 17, 53063, 33, 356, 2821, 16, 66556, 16, 33, 16, 17031, 43, 7326, 468, 17896, 17, 11405, 7380, 16, 17031, 26319, 35, 16, 5190, 3067, 39, 16, 386, 15204, 16, 10635, 45, 17, 11078, 19, 15, 15284, 3944, 18, 434, 57, 35, 22, 547, 11594, 17, 41, 16, 39309, 19, 17, 43240, 5626, 16, 4183, 2149, 16, 393, 2045, 55, 14659, 40849, 39, 13534, 33342, 17, 17742, 44, 24, 32787, 11451, 22, 12169, 1706, 21, 350, 1162, 32, 23975, 8281, 16, 431, 8041, 16, 1863, 19159, 44, 17, 25012, 17, 32, 431, 38067, 16, 21, 22, 38673, 18, 24, 39, 16, 328, 8556, 18, 20, 32, 18, 198, 4713, 220, 17, 25, 1863, 38067, 18, 24, 20, 393, 867, 42, 52148, 16, 9256, 6504, 17, 356, 17, 6484, 20, 328, 8556, 17, 22, 32, 18, 350, 1570, 14892, 43, 8575, 42, 62538, 393, 4239, 17612, 386, 4677, 828, 22, 425, 2954, 53622, 53, 18, 43, 16, 12617, 52983, 66556, 16, 16, 33, 29070, 20, 18, 26095, 17, 45816, 39, 16, 31921, 55, 46, 17, 16, 619, 1861, 74780, 35, 16, 16079, 2916, 16, 30572, 51, 16, 350, 1570, 42, 16, 10584, 828, 17, 362, 9389, 16, 451, 1740, 2916, 16, 30923, 10504, 28667, 17, 16, 26081, 47, 16, 11405, 3298, 16, 7531, 50195, 16, 11405, 7462, 17, 4984, 1791, 16, 18, 17258, 1706, 17, 71784, 37, 19, 43461, 56, 28333, 2916, 16, 17, 431, 22246, 9389, 16, 444, 13095, 74038, 17, 49, 20, 36, 479, 1593, 35, 19, 431, 1867, 18, 16, 547, 40849, 39, 328, 8556, 17, 32, 21, 358, 36332, 17, 49, 479, 10808, 17, 32, 17, 386, 8590, 21, 67572, 33, 17, 479, 15665, 19, 20, 32, 647, 3825, 43, 19, 356, 3012, 47, 472, 31939, 17, 15, 33, 20694, 2537, 687, 16, 31640, 49, 17, 40, 6673, 8505, 16, 451, 3124, 16, 18, 18, 6976, 784, 45, 16, 13716, 934, 5049, 19, 22578, 42, 18, 34, 17, 33, 25578, 19, 32, 16, 23975, 2716, 20, 15, 32, 730, 5863, 32, 15, 16, 24, 21, 29615, 42, 17, 356, 35646, 22, 32, 422, 37325, 16, 43, 66556, 21, 53, 16, 35, 730, 828, 21, 32, 30572, 49, 22, 32, 17, 24591, 640, 38, 16, 8030, 30725, 4984, 2537, 4872, 18, 350, 67023, 19, 547, 25609, 16, 358, 17048, 17, 24826, 1914, 350, 867, 16, 89933, 44, 16, 43, 3043, 35, 13485, 730, 2773, 20, 34, 6261, 4406, 16, 24, 2100, 42, 36690, 16, 15, 15490, 57, 16, 17, 547, 11594, 18, 34, 27974, 44, 16, 20, 33, 730, 29171, 16, 18224, 46, 16, 15, 79299, 23025, 39, 27223, 42, 16, 3298, 16, 43, 356, 23705, 18, 55484, 5781, 17, 5588, 45813, 472, 5491, 16, 22, 33, 16, 15, 14659, 29862, 27695, 20, 63286, 39, 17, 422, 2954, 55, 479, 35320, 16, 33, 67710, 13485, 24, 451, 3124, 23, 23, 730, 5863, 32, 15, 24, 15, 22, 22578, 42, 18, 49, 18, 45316, 3298, 18, 43, 1863, 11698, 18, 21, 27223, 42, 2537, 42, 17, 47592, 16, 39295, 3298, 16, 29070, 20, 18, 26095, 16, 6261, 915, 19, 33, 39295, 16, 39, 17, 9256, 1890, 22, 23975, 2716, 17, 328, 8556, 17, 20, 32, 19, 6261, 37, 3298, 17, 28333, 2916, 16, 24, 386, 4198, 37, 18, 393, 5936, 20, 32, 17912, 26095, 17, 328, 8556, 18, 20, 33, 16, 84807, 47, 21, 11078, 42, 20, 49, 16, 45816, 8505, 425, 51840, 20, 15552, 46107, 16, 393, 9501, 38, 16, 9412, 57, 43, 16, 328, 16, 15, 15, 32, 16, 18, 730, 8395, 18, 32, 198, 4713, 220, 18, 25, 647, 71302, 16, 66892, 16, 18, 425, 10842, 43, 7531, 3976, 16, 11405, 6076, 19, 393, 9501, 37, 16, 36822, 50195, 17924, 55, 16, 18, 43240, 4728, 17, 32907, 44, 18, 19087, 10504, 16, 32834, 57, 16, 22236, 37773, 20059, 2537, 35, 17, 11078, 42, 22, 451, 934, 6126, 16036, 45, 16, 39295, 17, 37, 21, 60656, 8505, 18, 32, 468, 6754, 1867, 16, 19, 451, 2034, 2537, 16, 67953, 16, 23975, 2716, 24, 22, 451, 3124, 23, 20, 393, 8276, 16, 17924, 55, 22, 51618, 35849, 16, 422, 25679, 444, 16567, 17, 422, 1748, 32, 27974, 44, 21, 13534, 5626, 24, 17, 27223, 19, 42, 19, 3928, 55, 19, 479, 4239, 26095, 23, 11078, 42, 16, 24, 350, 2104, 969, 19, 393, 4239, 45, 16, 8700, 38, 13669, 431, 8041, 17, 393, 1593, 35, 18, 425, 81756, 17, 43398, 1890, 32, 3928, 55, 16, 32, 434, 1381, 16, 451, 3298, 18966, 2537, 16, 11090, 2537, 16, 362, 1511, 29862, 434, 24273, 451, 3021, 16, 39233, 20, 393, 3706, 33, 350, 67023, 21, 12617, 42, 451, 8281, 32, 18, 451, 8505, 16, 27223, 42, 24, 356, 640, 42, 1863, 38067, 17, 22, 19, 730, 828, 21, 33, 468, 1593, 30698, 21, 17924, 55, 21, 25012, 26095, 16, 11078, 17155, 16, 32, 467, 3298, 37, 17, 422, 2034, 47, 19, 66556, 17, 34, 16, 19288, 8505, 75194, 19, 472, 17, 8276, 53, 11078, 42, 19, 434, 1637, 16, 328, 11604, 18, 13534, 5626, 23, 21, 28333, 5012, 17, 1863, 38067, 19, 20, 16, 4984, 2537, 16, 393, 4239, 45, 16, 17, 14309, 2537, 16, 44188, 41, 18, 47718, 386, 9985, 18, 468, 90106, 39309, 17, 20, 33, 11078, 42, 16, 82052, 49915, 21, 38254, 5491, 16, 15, 425, 19, 38, 828, 16, 422, 6408, 51, 3298, 17, 9630, 1402, 16, 15, 467, 7687, 22, 356, 9389, 33, 451, 3126, 3298, 32907, 52, 10006, 42, 328, 8556, 17, 20, 32, 16, 18, 41790, 47, 18, 431, 13669, 16, 30572, 2537, 23, 26081, 47, 17, 15552, 46107, 17, 16079, 3944, 17, 393, 3298, 19, 42, 17, 33, 730, 8395, 20, 33, 8575, 1220, 17, 18, 74038, 17, 49, 18, 34, 431, 1893, 32, 13339, 4239, 50, 16, 472, 87192, 23, 63644, 16, 26474, 60845, 422, 37325, 16, 547, 11594, 18, 33, 809, 7462, 16, 43, 16, 422, 16591, 19, 17, 434, 57, 35, 16, 50733, 89609, 20, 12169, 38, 10504, 47, 18, 23975, 24, 28667, 17, 444, 88698, 425, 3140, 17, 7284, 38, 19, 23690, 8884, 23, 2274, 47, 22, 547, 13095, 22, 198, 4713, 220, 19, 25, 18572, 5491, 6434, 34, 16, 39309, 19, 20, 11551, 45, 934, 16, 29145, 2537, 17, 32, 547, 11594, 17, 32, 48297, 10504, 17, 328, 11604, 16, 32, 91598, 17, 362, 4728, 19, 34, 27974, 44, 18, 19, 69352, 33, 18, 350, 4493, 33, 21, 11078, 42, 17, 10006, 76180, 17, 32, 17, 29569, 6412, 71328, 18, 362, 6484, 328, 8556, 18, 20, 32, 16, 472, 3846, 17, 39, 17, 11594, 425, 915, 7284, 38, 17, 393, 25674, 16, 6261, 915, 20, 33, 30080, 2916, 16, 393, 5609, 37, 17, 472, 45, 16, 43, 4984, 2537, 4872, 21, 32, 479, 7326, 16, 16, 31640, 49, 17, 42, 27695, 19, 38, 16, 82465, 44, 22, 15, 32, 74574, 26095, 16, 472, 56389, 16, 63612, 7749, 16, 5627, 6412, 17, 9221, 50, 18, 13716, 45, 5626, 16, 431, 1867, 19, 32, 73061, 3588, 45, 17, 393, 1893, 36, 479, 7326, 40, 17, 451, 4656, 51, 24, 6673, 9548, 16, 9256, 953, 434, 11383, 50, 422, 8505, 37, 16, 25692, 1914, 16, 431, 1867, 17, 16, 30904, 952, 19, 43760, 16, 479, 18, 26095, 16, 23975, 24, 28667, 18, 468, 94306, 16, 14773, 45, 37776, 37, 18, 3385, 8973, 16, 41790, 47, 16, 15, 8700, 5381, 16, 26095, 16, 350, 4897, 16, 35, 24, 33, 6261, 90111, 2537, 16, 10315, 42, 16, 451, 953, 37, 17031, 45, 5626, 24, 17031, 30042, 19, 33, 15645, 47, 4656, 16, 69961, 16, 32, 75921, 16, 16, 15, 362, 17048, 1599, 2045, 22, 28333, 5012, 16, 21, 393, 11907, 16, 23975, 1479, 16, 15, 386, 2749, 42, 39309, 17, 20, 32, 30572, 2537, 23, 43, 422, 3021, 350, 3540, 17, 17, 35, 18, 356, 9197, 20, 22, 3928, 1402, 26095, 479, 26227, 6352, 16, 11344, 42, 451, 3021, 17, 6159, 8106, 37, 16, 451, 3124, 24, 18, 61901, 65036, 1863, 54, 16, 15, 8575, 42, 55, 7206, 28668, 16, 3424, 7612, 16, 356, 11242, 57, 24981, 16, 26465, 46, 16, 32, 13534, 7326, 17, 451, 4656, 6484, 18, 19360, 37, 18, 358, 29862, 42, 2537, 92533, 17, 20, 451, 5459, 33, 17, 3928, 55, 26095, 16, 730, 5863, 32, 16, 15, 18, 18, 479, 33342, 20, 3928, 22, 444, 11383, 828, 16, 425, 10994, 39, 431, 5012, 21, 26444, 16, 431, 16381, 20, 6976, 73812, 350, 67023, 18, 19072, 33, 19, 16, 43, 17, 472, 8264, 47, 16, 451, 3124, 21, 17, 506, 55, 1162, 16, 451, 6408, 49608, 33, 16, 18224, 12979, 47, 17, 45316, 3298, 18, 386, 3925, 444, 1914, 16, 24328, 33, 506, 55, 14557, 16, 809, 33539, 21, 431, 21657, 16, 33, 44741, 3919, 16, 434, 1402, 20, 22, 32, 198, 4713, 220, 20, 25, 61687, 386, 17155, 42, 16, 356, 8065, 47, 17, 6826, 1706, 16, 49608, 12335, 17, 43981, 26492, 10098, 17, 31640, 49, 16, 34, 89204, 17, 328, 16680, 47, 17, 2274, 47, 21, 30042, 393, 3021, 17, 350, 4897, 16, 35, 18, 16, 44188, 46, 18, 6976, 31160, 472, 4592, 35, 16, 356, 6610, 16, 27223, 42, 2537, 42, 20, 6826, 5781, 19, 32, 2274, 47, 16, 19, 358, 36332, 17, 26095, 17, 76224, 16, 15, 422, 2034, 47, 16, 16, 350, 44756, 17, 8575, 7123, 730, 5863, 32, 15, 22, 20, 18, 422, 1162, 35, 422, 2034, 47, 21, 451, 1930, 18, 39295, 1911, 350, 26095, 472, 3846, 16, 39, 17, 88307, 393, 15778, 17, 33, 434, 14323, 38137, 1402, 16, 393, 11907, 19, 350, 1162, 45, 16, 17742, 44, 17, 17, 1863, 38067, 16, 18, 16, 730, 2773, 16, 26095, 92851, 21, 49142, 7326, 16, 26095, 17, 10922, 1861, 16, 35, 19, 472, 4592, 33, 16, 11405, 6076, 24, 31640, 33, 358, 36332, 16, 49, 18224, 9389, 17, 444, 20637, 45, 393, 1914, 33, 425, 1890, 18, 80117, 18, 24, 386, 6349, 17, 10006, 76180, 16, 32, 16, 6261, 39, 10777, 37, 17, 13534, 51271, 6434, 18, 26095, 20, 730, 8395, 20, 32, 10006, 21657, 16, 358, 10504, 35, 17, 5588, 40, 17, 22578, 39, 16, 35, 16, 44727, 1715, 18, 31921, 36530, 16, 17, 9630, 39, 20, 328, 8556, 16, 16, 32, 17, 24872, 37881, 18, 11078, 18, 17, 15, 472, 1808, 39, 4984, 3256, 16, 8753, 51326, 22, 32, 16, 10106, 10098, 17, 29145, 10298, 16, 27223, 17, 42, 20, 92851, 20, 479, 1867, 40637, 16, 11685, 828, 49, 16, 350, 32131, 17, 356, 8264, 47, 57, 91750, 45, 16, 29070, 20, 18, 434, 1402, 17, 15, 33, 451, 11419, 17, 43, 17, 9630, 40, 16, 7369, 38, 18, 431, 21657, 16, 17, 22578, 42, 18, 34, 18, 444, 21657, 2537, 16, 422, 2034, 47, 17, 17, 11405, 8412, 16, 15, 393, 19, 2545, 44, 23975, 2716, 20, 730, 2773, 17, 15, 32, 467, 7687, 21, 16, 8700, 12001, 16, 472, 828, 16, 356, 12173, 16, 14137, 19147, 21, 11078, 39, 18, 362, 5865, 356, 7384, 479, 10808, 17, 36, 17, 45728, 19, 422, 1748, 33, 468, 10842, 33, 17, 431, 1867, 16, 16, 37, 3298, 17, 472, 5491, 16, 22, 33, 16, 16, 19360, 33, 21, 431, 97765, 479, 24896, 34995, 828, 16, 44188, 46, 19, 12072, 3090, 17, 43, 451, 1930, 34, 16, 14850, 53, 5609, 19796, 34, 18, 328, 8556, 17, 20, 32, 19, 21, 42760, 8973, 16, 5017, 36530, 16, 39233, 17, 90474, 21, 451, 8626, 45, 4984, 11907, 17, 27974, 16, 8700, 5381, 20, 198, 4713, 220, 21, 25, 32787, 69004, 11344, 16, 18, 5609, 16, 9630, 828, 16, 3034, 17, 479, 7326, 16, 20, 444, 24273, 350, 3399, 29730, 35, 20, 40711, 687, 16, 328, 8556, 20, 32, 21, 431, 1867, 17, 22, 32, 479, 4872, 16, 10315, 47, 17, 36711, 38, 2537, 16, 15552, 58367, 16, 20, 17742, 47, 17, 1863, 38067, 20, 23, 24, 468, 14707, 356, 8264, 23025, 16079, 42, 350, 27188, 16, 30080, 59450, 17, 49, 10292, 5609, 386, 35830, 16, 547, 4239, 16, 19, 32, 328, 11604, 19, 431, 11451, 16, 431, 23818, 32, 14773, 33, 16, 15, 74038, 16, 49, 16, 18, 33, 7369, 16413, 29626, 12979, 647, 5012, 22, 17, 422, 2034, 47, 18, 10315, 37309, 18, 431, 79592, 16, 42760, 3825, 730, 2773, 17, 34, 444, 14557, 434, 1402, 21, 18, 32, 16292, 17, 730, 5863, 32, 15, 16, 15, 15, 44727, 828, 34, 18, 4434, 2537, 16, 16, 72281, 17, 14659, 42916, 17, 393, 8106, 16, 20, 43, 730, 1162, 35, 20, 431, 969, 33, 6826, 1317, 17, 1863, 38067, 18, 16, 23, 393, 7498, 49, 468, 1479, 451, 26998, 33, 5863, 18224, 34, 24977, 16, 393, 26998, 43, 472, 1570, 16, 23229, 52, 16, 11078, 20, 23, 809, 3617, 5262, 16, 431, 16522, 17, 13534, 5626, 23, 20, 33, 46180, 16208, 47, 18, 17258, 8093, 43, 16, 42217, 16, 362, 28633, 16, 431, 2537, 16, 38, 2537, 33414, 17, 784, 16, 5752, 29923, 16, 18572, 7984, 425, 51840, 17, 422, 16591, 16, 15, 8575, 19701, 19, 18224, 43, 24, 13716, 1808, 18, 467, 8485, 16, 27695, 19, 8264, 47, 16, 356, 953, 1740, 15008, 39, 350, 3298, 42793, 48523, 17, 74038, 17, 49, 20, 32, 23403, 46737, 23, 358, 29862, 29862, 393, 4835, 3298, 16, 66556, 20, 50, 328, 8556, 18, 22, 32, 19, 362, 3825, 87320, 45, 18, 22578, 42, 18, 49, 19, 647, 2537, 33, 468, 15653, 16, 18224, 12979, 47, 356, 14065, 19, 468, 6484, 431, 5012, 20, 82465, 44, 18, 19, 422, 10842, 17, 31640, 38, 17, 95858, 77020, 18, 7531, 49064, 16, 1599, 17896, 1740, 47, 16, 49521, 42, 16, 27223, 22, 393, 7863, 19, 14137, 3706, 20, 27223, 18, 42, 19, 29569, 3617, 16, 25735, 17, 33, 16, 2100, 59450, 22, 328, 868, 7347, 18, 13534, 8065, 18, 12932, 867, 17, 96966, 17, 38, 16, 20, 45414, 16128, 17, 17924, 55, 16, 16, 444, 21657, 16, 15, 75083, 20117, 17, 30923, 3298, 16, 29717, 16, 2274, 47, 16, 386, 3617, 14596, 17, 14773, 17563, 16, 12072, 47, 16, 198, 4713, 220, 22, 25, 22884, 37, 16, 472, 20252, 16, 6826, 45, 16, 92127, 8598, 29569, 33, 20, 21, 16, 422, 12335, 51267, 44727, 828, 34, 19, 647, 8093, 18, 9256, 13649, 23975, 2716, 16, 16, 15, 40026, 2828, 16, 11078, 17155, 17, 32, 468, 9951, 16, 350, 23025, 20, 17, 43, 17, 431, 4406, 18, 23, 29850, 1317, 8575, 64638, 48, 468, 2668, 18, 328, 30465, 16524, 39864, 50, 687, 18, 23975, 2716, 16, 15, 24, 393, 20637, 16, 89204, 16, 11405, 6076, 16, 15, 472, 17845, 9420, 5609, 11078, 5049, 19, 431, 8041, 18, 434, 30498, 16, 479, 15665, 19, 20, 33, 15645, 34, 21, 66186, 8065, 17, 35, 13339, 30042, 17, 358, 640, 18, 434, 3126, 6826, 5781, 21, 29850, 7376, 1863, 38067, 20, 23, 21, 356, 20, 434, 13485, 17, 479, 4485, 17, 422, 7783, 17, 24311, 19147, 17, 40026, 2069, 16, 386, 14884, 17, 34, 13534, 38067, 14659, 26444, 16, 13716, 934, 6484, 17, 451, 26998, 33, 5371, 356, 3140, 17, 1964, 4406, 16, 3928, 42, 16, 15, 13534, 3944, 17, 31921, 55, 46, 16, 16, 13339, 30042, 16, 14137, 19147, 19, 75007, 16, 96316, 934, 472, 1898, 640, 17, 358, 44676, 8412, 47, 17, 393, 8106, 22, 386, 19363, 45, 16, 4063, 78961, 19, 55872, 16208, 18, 49521, 42, 17, 328, 8556, 16, 32, 19, 42254, 33, 16, 41790, 47, 17, 11344, 19, 49, 32787, 55, 17, 24, 434, 11451, 17, 3928, 18, 38, 969, 20, 11344, 16, 33, 66556, 21, 53, 15, 33, 3928, 2537, 17, 472, 87192, 16, 32, 27223, 42, 16, 18, 8575, 42, 1890, 17, 7284, 52466, 18572, 9745, 969, 16, 431, 21657, 23, 16079, 6140, 49, 18, 27223, 42, 2537, 42, 18, 10315, 37309, 16, 10584, 1793, 24, 2100, 46, 16, 15, 328, 8556, 17, 20, 32, 16, 19, 358, 29862, 3390, 74150, 24, 32, 472, 28014, 17, 468, 36332, 328, 8556, 18, 20, 37, 17, 468, 1285, 16, 32, 422, 2034, 47, 16, 19, 393, 3257, 16, 16, 32, 31921, 55, 46, 22, 13534, 7326, 16, 3596, 9197, 20, 451, 26998, 33, 3256, 356, 17, 6484, 17, 12200, 5350, 16, 393, 7268, 16, 48297, 10504, 19, 468, 26095, 393, 26227, 425, 3140, 22, 33, 31866, 86005, 2916, 32, 16, 79987, 16, 479, 6029, 41790, 47, 22, 647, 5012, 17, 23, 350, 1317, 1402, 16, 12878, 19100, 1863, 51326, 22455, 21, 1599, 26095, 16, 84246, 26095, 16, 19, 479, 7326, 40, 16, 20869, 1511, 16, 27974, 40449, 350, 80878, 18, 8575, 49389, 328, 2828, 1093, 16, 350, 828, 31264, 17, 92851, 16, 198, 4713, 220, 23, 25, 26101, 45, 16, 3928, 55, 26095, 17, 479, 9654, 16, 393, 4239, 7380, 362, 2045, 36, 44550, 7380, 16, 21, 32, 13984, 47, 3981, 16, 30250, 59450, 20, 393, 16524, 1791, 16, 6261, 39, 10777, 37, 16, 17, 8753, 5865, 32, 27931, 57, 17, 386, 1402, 12335, 16, 730, 5863, 32, 15, 18, 20, 20, 19288, 1402, 16, 356, 17, 6484, 17, 43, 31512, 33, 468, 17, 37, 17, 350, 20117, 19, 356, 14903, 45, 451, 26998, 33, 17, 356, 13095, 16, 730, 952, 4984, 1402, 17, 5308, 50, 16, 18803, 5049, 16, 434, 3126, 43, 16, 730, 2773, 16, 19, 9256, 1890, 19, 350, 89755, 11078, 42, 21, 3928, 21, 38, 969, 45, 1706, 17, 30080, 55, 17, 393, 4239, 45, 21, 11405, 8412, 23, 8575, 42, 6484, 10584, 9548, 18, 1964, 4406, 19, 33, 356, 13095, 18, 47391, 90814, 16, 24981, 20, 33, 479, 17088, 444, 3585, 18, 26474, 38, 3627, 30250, 59450, 16, 15, 8575, 42, 2149, 25578, 16, 32, 16, 393, 19, 17020, 17, 95034, 2537, 362, 7687, 33, 17, 468, 8626, 16, 18224, 92963, 74150, 20, 16, 34, 479, 4485, 18, 422, 3506, 17, 29850, 7581, 9630, 3021, 18, 328, 4406, 16, 422, 24273, 27404, 18, 49510, 362, 1511, 26444, 8753, 31464, 24591, 6126, 20, 5190, 3126, 37, 16, 27975, 9630, 57063, 20, 451, 3126, 18, 48483, 3140, 17, 21084, 76180, 16, 328, 2828, 8556, 17, 26492, 10098, 18, 350, 36332, 13095, 17, 328, 16, 15, 15, 32, 19, 39295, 18, 34, 16, 425, 5576, 17, 472, 17845, 9420, 4835, 431, 1706, 17, 56111, 10504, 431, 2916, 18, 24, 43, 39310, 39, 16, 386, 5459, 16, 393, 2954, 23, 425, 15778, 32834, 44, 17, 26474, 5863, 20, 328, 30521, 18, 425, 13485, 1799, 19, 15, 67710, 13485, 17, 16, 472, 10531, 55, 16, 434, 1911, 11405, 7462, 16, 393, 11907, 21, 444, 38100, 18, 19288, 1402, 18, 86005, 23652, 16, 89887, 51326, 7531, 55970, 18, 19370, 16522, 17, 356, 8264, 8041, 24981, 18, 619, 32841, 17, 23463, 45, 13534, 8065, 16, 151645, 198]
+[INFO:swift] [LABELS] [-100 * 3528]<think>
+
+</think>
+
+Block 1: FKBP4 RPS6 GRB7 ARNT2 DNAJA3 APP GNAS PXN HMGCS1 NVL CCNB1 MEST PLA2G4A DNMT1 GMNN USP22 RAI14 SOX4 ORC1 MLLT11 PUF60 EXT1 TRIB3 FAM69A SHB RPN1 CSNK1E PMM2 STUB1 MAT2A CD44 HTATSF1 RFNG FDFT1 PCNA PGRMC1 SOX2 PSMD2 TERF2IP PAPD7 UBE2L6 HIF1A HSPA4 STK25 RNPS1 TRIM2 LRRC41 CDC20 RALGDS EPHA3 CAMSAP2 ZMIZ1 SNCA ADGRG1 PTPRK ABCF1 PAFAH1B3 PTK2 NIT1 RHEB CDKN1B TIMM17B BUB1B STMN1 HMGCR CTNND1 HACD3 KLHDC2 COG7 PGAM1 PIK3CA CLIC4 TCEA2 CIRBP FSD1 MLEC MIF ECH1 BLCAP CXCR4 UBE2C LSM5 PAFAH1B1 HDAC2 NISCH PIN1 CLTC DNAJB6 SMARCC1 ALAS1 PLEKHJ1 NT5DC2 OXA1L MTF2 ETFB CANT1 ATP1B1 TXLNA EPN2 PSRC1 TXNRD1 ENOPH1 MTA1 RTN2 CD40 CPNE3 FZD7 UBE2J1 CDC42 NPDC1 NOTCH1 PPOX PHGDH CCNB2 TIMM9 DHRS7 HDAC6 TCTA TMCO1 RPA1 ZMYM2 TOP2A RNF167 SUV39H1 SLC35A3
+Block 2: ZNF395 PLEKHM1 SPRED2 C2CD5 SLC27A3 TES EVL PRKACA PTPRF MBOAT7 BAX SUPV3L1 CRKL ATP11B TP53BP2 RNH1 FBXO21 JUN CISD1 SYPL1 AKT1 TESK1 ACAT2 ABL1 NPEPL1 TNFRSF21 PARP1 PSIP1 SCRN1 PSME2 TRIM13 ELAC2 CPSF4 ACLY MRPL12 RUVBL1 LBR PPP2R5E GLOD4 RAB31 UGDH SLC2A6 IGF2R GTF2A2 MSH6 COPB2 GADD45A VGLL4 CHERP HMG20B CIAPIN1 POLR2I PCMT1 NUP133 CLSTN1 SMARCA4 PIK3C2B COL4A1 TMEM50A KIAA0196 TLK2 COPS7A DNM1L ATP6V1D KAT6A AKR7A2 TCERG1 SDHB TRAPPC3 TSPAN4 UFM1 IARS2 PKIG TLE1 SACM1L NSDHL KIF5C ARPP19 ANKRD10 SUZ12 UBE3C RBM15B KTN1 MYO10 SCCPDH MAPK1IP1L CASC3 PXMP2 GLRX HSD17B10 PHKB EIF5 EZH2 DAXX GOLT1B KLHL9 NUP88 KIAA0907 PIK3R3 BNIP3L ZFP36 MAPKAPK2 VAT1 NRIP1 TP53BP1 ARID4B NR1H2 SPAG7 TMEM2 SLC25A4 ARFIP2 MRPL19 MTERF3 PDS5A APPBP2 SLC35B1 SENP6 CDK5R1 RNMT BIRC5 DNAJB1 PSMG1 MPZL1 S100A13 KDM3A
+Block 3: VDAC1 IPO13 BPHL SCAND1 PSMD4 PSMF1 METRN SNX13 NPRL2 CALM3 MTFR1 GSTZ1 TIMELESS NCAPD2 CDK7 NARFL EDN1 NR2F6 DNMT3A EFCAB14 NUSAP1 FAT1 TMEM97 NUP85 PAF1 SNX7 SQSTM1 DERA LPAR2 DFFA RBM6 CCDC92 MAP4K4 STX4 GTPBP8 CDK19 TCEAL4 PTPN1 ITGAE RPA2 PLOD3 BZW2 RRAGA STX1A FUT1 NIPSNAP1 KEAP1 AURKB FYN NCK1 RFC5 PCCB TSPAN6 CRK NCOA3 NMT1 MAPK9 CERK ZNF274 KAT6B ELOVL6 SNX6 TOPBP1 CDKN1A WIPF2 DUSP4 ATP2C1 ICMT BMP4 H2AFV CDK4 FIS1 SMC3 CCDC86 MRPS2 ZNF451 TRAP1 PTPN12 DRAP1 FOXJ3 BAD MCM3 EPRS CDC25B CDK1 JMJD6 MFSD10 B4GAT1 DNTTIP2 ADAM10 WDR7 CBLB NOSIP CALU CSK SLC25A13 CASP3 RAE1 AKAP8 PARP2 DNAJB2 SYNE2 PIP4K2B KDM5B PRSS23 PPP2R3C RPIA MBTPS1 HSPA8 TPM1 PDHX DNM1 UBE3B YME1L1 DDX42 FZD1 FASTKD5 HDGFRP3 TM9SF2 LIPA BCL2 COG4 GPATCH8 USP7 UBR7
+Block 4: CTSD SHC1 CDC45 IFNAR1 TFAP2A UBE2A FGFR2 SMC1A MPC2 ARL4C RBM34 PLCB3 TUBB6 CDK2 CSNK2A2 CYCS LAP3 ACD SLC35A1 HIST2H2BE BID COG2 PWP1 ARID5B TBPL1 PRAF2 HN1L TRAPPC6A GNA11 POLR2K EIF4G1 TOMM70A TARBP1 HYOU1 WDTC1 SOCS2 INTS3 SMNDC1 RAB4A UBQLN2 PPIE GNAI2 NUDT9 PCBD1 SPEN FPGS DMTF1 INSIG1 RAB21 DDIT4 DDR1 G3BP1 TM9SF3 EDEM1 GRN WASF3 DECR1 CASP10 ITGB1BP1 TBC1D9B ARHGAP1 PLK1 NENF TXNDC9 TXNL4B HERPUD1 TOR1A CCP110 AARS XPO7 MRPS16 PAK1 TMED10 MELK CDC25A AKAP8L DCK TSC22D3 CEP57 STAMBP GNPDA1 ILK NCK2 CGRRF1 NUP93 PNKP ZW10 PRKX BECN1 ISOC1 CRYZ STAT1 CORO1A CCNA2 NUDCD3 ABCF3 IKBKAP SNAP25 NUCB2 STXBP1 KIAA1033 GNB5 ST7 LPGAT1 BLMH RPS6KA1 RFX5 CLPX TSPAN3 EPB41L2 HEBP1 NUP62 OXCT1 NNT CREB1 MYCBP2 BNIP3 MOK LIG1 WRB OXSR1 YKT6 RRP1B MICALL1 FAM57A
+Block 5: CAST MKNK1 CNDP2 CHAC1 CRELD2 CAT ERBB2 POLR1C MMP2 SSBP2 USP6NL PCK2 TBC1D31 FOXO3 CLTB HSPD1 CHP1 MAPKAPK5 CHMP4A USP14 IGF2BP2 TEX10 DUSP11 TSEN2 PRCP KIAA0753 DCTD DUSP6 NOL3 NRAS TBP HIST1H2BK PTK2B FAIM TIAM1 PAK4 TCTN1 TIMM22 ZNF131 KIF1BP ATF6 EBNA1BP2 DCUN1D4 HSPB1 PSMD9 POLB IGF1R MYBL2 LGMN PIGB BAG3 CAB39 MAST2 CSNK1A1 ARHGEF2 CCNH SH3BP5 KDM5A CSRP1 IFRD2 GLI2 PIH1D1 NFIL3 FBXL12 ADH5 SLC11A2 CNPY3 CD320 HADH TRIB1 ALDH7A1 APBB2 TFDP1 MAP2K5 ATF5 GABPB1 HEATR1 TWF2 CEBPZ SESN1 TP53 FAM20B NFE2L2 ADI1 ATG3 RRP12 PIK3C3 LRPAP1 DUSP22 PSMB10 P4HTM TMEM5 KIF20A WDR61 ITFG1 HAT1 CREG1 ABHD6 CDH3 ADO CASK GTF2E2 POP4 DFFB EPHB2 RAB11FIP2 HSD17B11 ABCB6 RALA GALE MNAT1 FOXO4 SKIV2L NOLC1 BLVRA ASCC3 SLC25A46 PYCR1 LOXL1 RFC2 LSM6 NGRN TRAK2 RB1 ITGB5
+Block 6: DHDDS IL13RA1 ADAT1 ID2 GNA15 LYN TERT GDPD5 AXIN1 SLC5A6 RAB27A GPC1 PLP2 IQGAP1 DNAJC15 TIMP2 ZNF589 EAPP CEBPD SYK TJP1 TBXA2R MSRA MALT1 UTP14A SMC4 RRS1 RHOA GRB10 PPP1R13B ATMIN SGCB VPS72 DUSP3 PLSCR3 RASA1 PYGL KIF2C LSR FAM63A ME2 KIAA0100 NFATC3 THAP11 PAN2 PHKG2 PRR15L KCTD5 RALB CHIC2 ZNF318 PECR EED NFKBIA MYC NET1 PFKL HES1 RSU1 CD58 YTHDF1 RGS2 CCDC85B IGFBP3 ELAVL1 HK1 ACAA1 RAP1GAP HS2ST1 ASAH1 CTSL BIRC2 DDX10 PRPF4 MYL9 SMAD3 WFS1 EIF4EBP1 CENPE FAH TIPARP SCP2 PPP2R5A LGALS8 IKBKB PMAIP1 ATP5S SLC37A4 AGL CETN3 PIK3R4 VAPB ETV1 MYCBP CNOT4 ECD RPS5 TOMM34 DPH2 POLG2 DYRK3 SCARB1 XPNPEP1 CHEK1 MAP7 POLD4 ABCC5 MAP3K4 CYTH1 MAN2B1 ANXA7 SORBS3 CCND3 POLE2 PLA2G15 HMGA2 SNX11 LRP10 KDELR2 TNIP1 NPC1 USP1 MTHFD2 GRWD1 SKP1
+Block 7: MACF1 HTRA1 CHN1 BAMBI CYB561 DLD SPR NFATC4 VAV3 SPDEF TMEM110 GFPT1 CDKN2A ETS1 TPD52L2 RPP38 PPIC PRKCQ EML3 SQRDL PACSIN3 TMEM109 PGM1 MMP1 PSMD10 HLA-DRA CDCA4 RPA3 FCHO1 GADD45B HERC6 DENND2D MBNL2 IER3 FOS CHMP6 PPARD ZNF586 C5 FHL2 GATA2 DSG2 AMDHD2 GFOD1 MEF2C CCNF PHKA1 SMARCD2 NFKBIE CCL2 INPP1 STK10 CCNE2 FBXO11 MBNL1 ABHD4 PCM1 CFLAR HOMER2 IGHMBP2 PRR7 MCOLN1 EXOSC4 TGFB3 CHEK2 SLC1A4 SATB1 CASP2 IL4R DHX29 FRS2 ST3GAL5 IL1B ATP6V0B STAP2 HSPA1A MAPK13 PRKAG2 COASY CTNNAL1 RRP8 SYNGR3 MAPKAPK3 PLSCR1 ACOT9 ANO10 SLC25A14 IKBKE RAD9A HOOK2 EGF SLC35F2 ERO1A DUSP14 PEX11A FBXO7 CCNA1 REEP5 NFKBIB C2CD2 HPRT1 PLS1 FGFR4 EBP PNP BCL7B MVP LYPLA1 DAG1 GAA CASP7 VPS28 TICAM1 PAICS ZDHHC6 XBP1 FKBP14 GNAI1 MCUR1 RBKS TSTA3 PRUNE SPTAN1 TATDN2 ATF1
+Block 8: CAPN1 STXBP2 GPER1 PTPRC APOE LRRC16A SERPINE1 HOXA5 PDLIM1 ARHGEF12 ALDOA FEZ2 MAMLD1 KIAA0355 ICAM1 C2CD2L RELB E2F2 TLR4 CTTN NFKB2 CBR1 KIT TRAM2 PROS1 BRCA1 FOSL1 KIF14 SPAG4 TSKU CDK6 ST6GALNAC2 TBX2 PTPN6 PSMB8 PRKCD ACBD3 INPP4B CBR3 IKZF1 STAT5B GHR LAGE3 PDGFA HOXA10 PRKCH COL1A1 P4HA2 CRTAP ADRB2 EGR1 MYLK RAD51C GATA3 DDB2 PPARG ADCK3 SPP1 DYNLT3 SRC AURKA ALDOC TCFL5 ENOSF1 IDE ADGRE5 NOS3 CXCL2 KCNK1 SPTLC2 ERBB3 TGFBR2 S100A4 NR3C1 BACE2 HLA-DMA RAC2 EGFR RPL39L BDH1 MUC1 PAX8 BTK GSTM2 PDIA5 SIRT3 BHLHE40 KLHL21 HMOX1 FAS PSME1 PAK6 LAMA3 ICAM3 LYRM1 GAPDH SCYL3 PTGS2 CEBPA STAT3 JADE2 SFN CCND1<|im_end|>
+
+[INFO:swift] Dataset Token Length: 6942.311142±24.682177, min=6885.000000, max=7241.000000, size=142234
+[INFO:swift] The SftArguments will be saved in: /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v1-20260512-101448/args.json
+[INFO:swift] model: Qwen3ForCausalLM(
+  (model): Qwen3Model(
+    (embed_tokens): Embedding(151936, 1024)
+    (layers): ModuleList(
+      (0-27): 28 x Qwen3DecoderLayer(
+        (self_attn): Qwen3Attention(
+          (q_proj): Linear(in_features=1024, out_features=2048, bias=False)
+          (k_proj): Linear(in_features=1024, out_features=1024, bias=False)
+          (v_proj): Linear(in_features=1024, out_features=1024, bias=False)
+          (o_proj): Linear(in_features=2048, out_features=1024, bias=False)
+          (q_norm): Qwen3RMSNorm((128,), eps=1e-06)
+          (k_norm): Qwen3RMSNorm((128,), eps=1e-06)
+        )
+        (mlp): Qwen3MLP(
+          (gate_proj): Linear(in_features=1024, out_features=3072, bias=False)
+          (up_proj): Linear(in_features=1024, out_features=3072, bias=False)
+          (down_proj): Linear(in_features=3072, out_features=1024, bias=False)
+          (act_fn): SiLUActivation()
+        )
+        (input_layernorm): Qwen3RMSNorm((1024,), eps=1e-06)
+        (post_attention_layernorm): Qwen3RMSNorm((1024,), eps=1e-06)
+      )
+    )
+    (norm): Qwen3RMSNorm((1024,), eps=1e-06)
+    (rotary_emb): Qwen3RotaryEmbedding()
+  )
+  (lm_head): Linear(in_features=1024, out_features=151936, bias=False)
+)
+[INFO:swift] model_parameter_info: Qwen3ForCausalLM: 596.0499M Params (596.0499M Trainable [100.0000%]), 0.0001M Buffers.
+[RANK 0] Detected kernel version 4.15.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO:swift] use_reentrant: True
+[INFO:swift] The logging file will be saved in: /root/dengjie/AI4SCI/Model-Saves/Qwen3-0.6B-SFT-Mixed/v1-20260512-101448/logging.jsonl
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+[RANK 0] Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 32. Using DeepSpeed's value.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None}.
+Train:   0%|          | 0/1112 [00:00<?, ?it/s][INFO:swift] use_logits_to_keep: True
+Train:   0%|          | 1/1112 [04:34<84:40:08, 274.35s/it]                                                           {'loss': 2.58981109, 'grad_norm': 0.0, 'learning_rate': 0.0, 'token_acc': 0.62115685, 'epoch': 0.0, 'global_step/max_steps': '1/1112', 'elapsed_time': '4m 34s', 'remaining_time': '3d 12h 40m 14s', 'memory(GiB)': 28.74, 'train_speed(s/it)': 274.360444}
+Train:   0%|          | 1/1112 [04:34<84:40:08, 274.35s/it]Train:   0%|          | 1/1112 [04:34<84:40:08, 274.35s/it]Train:   0%|          | 2/1112 [09:06<84:12:09, 273.09s/it]Train:   0%|          | 3/1112 [13:39<84:03:13, 272.85s/it]Train:   0%|          | 4/1112 [18:10<83:49:42, 272.37s/it]Train:   0%|          | 5/1112 [22:43<83:44:32, 272.33s/it]                                                           {'loss': 2.56648493, 'grad_norm': 0.0, 'learning_rate': 0.0, 'token_acc': 0.62796152, 'epoch': 0.0, 'global_step/max_steps': '5/1112', 'elapsed_time': '22m 43s', 'remaining_time': '3d 11h 49m 35s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 272.605788}
+Train:   0%|          | 5/1112 [22:43<83:44:32, 272.33s/it]Train:   0%|          | 5/1112 [22:43<83:44:32, 272.33s/it]Train:   1%|          | 6/1112 [27:15<83:40:05, 272.34s/it]Train:   1%|          | 7/1112 [31:47<83:33:52, 272.25s/it]Train:   1%|          | 8/1112 [36:19<83:26:55, 272.12s/it]Train:   1%|          | 9/1112 [40:51<83:22:58, 272.15s/it]Train:   1%|          | 10/1112 [45:23<83:15:49, 272.01s/it]                                                            {'loss': 2.4818512, 'grad_norm': 62.73867798, 'learning_rate': 1.79e-06, 'token_acc': 0.63012757, 'epoch': 0.01, 'global_step/max_steps': '10/1112', 'elapsed_time': '45m 23s', 'remaining_time': '3d 11h 21m 34s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 272.317402}
+Train:   1%|          | 10/1112 [45:23<83:15:49, 272.01s/it]Train:   1%|          | 10/1112 [45:23<83:15:49, 272.01s/it]Train:   1%|          | 11/1112 [49:55<83:14:28, 272.18s/it]Train:   1%|          | 12/1112 [54:27<83:10:07, 272.19s/it]Train:   1%|          | 13/1112 [59:00<83:06:11, 272.22s/it]Train:   1%|▏         | 14/1112 [1:03:32<82:59:31, 272.11s/it]Train:   1%|▏         | 15/1112 [1:08:03<82:52:22, 271.96s/it]                                                              {'loss': 2.06062546, 'grad_norm': 21.54257011, 'learning_rate': 3.57e-06, 'token_acc': 0.61689152, 'epoch': 0.01, 'global_step/max_steps': '15/1112', 'elapsed_time': '1h 8m 4s', 'remaining_time': '3d 10h 57m 36s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 272.248188}
+Train:   1%|▏         | 15/1112 [1:08:03<82:52:22, 271.96s/it]Train:   1%|▏         | 15/1112 [1:08:03<82:52:22, 271.96s/it]Train:   1%|▏         | 16/1112 [1:12:35<82:49:03, 272.03s/it]Train:   2%|▏         | 17/1112 [1:17:08<82:45:18, 272.07s/it]Train:   2%|▏         | 18/1112 [1:21:41<82:46:08, 272.37s/it]Train:   2%|▏         | 19/1112 [1:26:13<82:42:37, 272.42s/it]Train:   2%|▏         | 20/1112 [1:30:44<82:29:14, 271.94s/it]                                                              {'loss': 1.66115761, 'grad_norm': 9.61372471, 'learning_rate': 5.36e-06, 'token_acc': 0.66909875, 'epoch': 0.02, 'global_step/max_steps': '20/1112', 'elapsed_time': '1h 30m 44s', 'remaining_time': '3d 10h 34m 29s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 272.224227}
+Train:   2%|▏         | 20/1112 [1:30:44<82:29:14, 271.94s/it]Train:   2%|▏         | 20/1112 [1:30:44<82:29:14, 271.94s/it]Train:   2%|▏         | 21/1112 [1:35:16<82:26:20, 272.03s/it]Train:   2%|▏         | 22/1112 [1:39:48<82:20:07, 271.93s/it]Train:   2%|▏         | 23/1112 [1:44:20<82:15:05, 271.91s/it]Train:   2%|▏         | 24/1112 [1:48:51<82:09:06, 271.83s/it]Train:   2%|▏         | 25/1112 [1:53:23<82:03:57, 271.79s/it]                                                              {'loss': 1.39807262, 'grad_norm': 4.13438654, 'learning_rate': 7.14e-06, 'token_acc': 0.69599761, 'epoch': 0.02, 'global_step/max_steps': '25/1112', 'elapsed_time': '1h 53m 24s', 'remaining_time': '3d 10h 10m 22s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 272.145253}
+Train:   2%|▏         | 25/1112 [1:53:23<82:03:57, 271.79s/it]Train:   2%|▏         | 25/1112 [1:53:23<82:03:57, 271.79s/it]Train:   2%|▏         | 26/1112 [1:57:55<82:00:12, 271.83s/it]Train:   2%|▏         | 27/1112 [2:02:27<81:57:28, 271.93s/it]Train:   3%|▎         | 28/1112 [2:06:59<81:51:35, 271.86s/it]Train:   3%|▎         | 29/1112 [2:11:31<81:46:54, 271.85s/it]Train:   3%|▎         | 30/1112 [2:16:02<81:41:29, 271.80s/it]                                                              {'loss': 1.26294994, 'grad_norm': 3.57760072, 'learning_rate': 8.93e-06, 'token_acc': 0.70497017, 'epoch': 0.03, 'global_step/max_steps': '30/1112', 'elapsed_time': '2h 16m 3s', 'remaining_time': '3d 9h 46m 50s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 272.097808}
+Train:   3%|▎         | 30/1112 [2:16:02<81:41:29, 271.80s/it]Train:   3%|▎         | 30/1112 [2:16:02<81:41:29, 271.80s/it]Train:   3%|▎         | 31/1112 [2:20:34<81:35:07, 271.70s/it]Train:   3%|▎         | 32/1112 [2:25:06<81:34:38, 271.92s/it]Train:   3%|▎         | 33/1112 [2:29:37<81:25:44, 271.68s/it]Train:   3%|▎         | 34/1112 [2:34:09<81:23:07, 271.79s/it]Train:   3%|▎         | 35/1112 [2:38:42<81:20:24, 271.89s/it]                                                              {'loss': 1.16755199, 'grad_norm': 3.43605947, 'learning_rate': 1.071e-05, 'token_acc': 0.71779414, 'epoch': 0.03, 'global_step/max_steps': '35/1112', 'elapsed_time': '2h 38m 42s', 'remaining_time': '3d 9h 23m 29s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 272.06057}
+Train:   3%|▎         | 35/1112 [2:38:42<81:20:24, 271.89s/it]Train:   3%|▎         | 35/1112 [2:38:42<81:20:24, 271.89s/it]Train:   3%|▎         | 36/1112 [2:43:14<81:16:52, 271.94s/it]Train:   3%|▎         | 37/1112 [2:47:45<81:09:36, 271.79s/it]Train:   3%|▎         | 38/1112 [2:52:17<81:04:29, 271.76s/it]Train:   4%|▎         | 39/1112 [2:56:48<80:57:12, 271.61s/it]Train:   4%|▎         | 40/1112 [3:01:20<80:52:57, 271.62s/it]                                                              {'loss': 1.09919968, 'grad_norm': 3.29329848, 'learning_rate': 1.25e-05, 'token_acc': 0.7272031, 'epoch': 0.04, 'global_step/max_steps': '40/1112', 'elapsed_time': '3h 1m 20s', 'remaining_time': '3d 8h 59m 50s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 272.00537}
+Train:   4%|▎         | 40/1112 [3:01:20<80:52:57, 271.62s/it]Train:   4%|▎         | 40/1112 [3:01:20<80:52:57, 271.62s/it]Train:   4%|▎         | 41/1112 [3:05:52<80:49:22, 271.67s/it]Train:   4%|▍         | 42/1112 [3:10:23<80:42:46, 271.56s/it]Train:   4%|▍         | 43/1112 [3:14:55<80:41:41, 271.75s/it]Train:   4%|▍         | 44/1112 [3:19:26<80:33:27, 271.54s/it]Train:   4%|▍         | 45/1112 [3:23:57<80:27:39, 271.47s/it]                                                              {'loss': 1.06248455, 'grad_norm': 5.22781849, 'learning_rate': 1.429e-05, 'token_acc': 0.73224394, 'epoch': 0.04, 'global_step/max_steps': '45/1112', 'elapsed_time': '3h 23m 58s', 'remaining_time': '3d 8h 36m 13s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 271.952461}
+Train:   4%|▍         | 45/1112 [3:23:57<80:27:39, 271.47s/it]Train:   4%|▍         | 45/1112 [3:23:57<80:27:39, 271.47s/it]Train:   4%|▍         | 46/1112 [3:28:29<80:26:42, 271.67s/it]Train:   4%|▍         | 47/1112 [3:33:01<80:23:54, 271.77s/it]Train:   4%|▍         | 48/1112 [3:37:33<80:19:42, 271.79s/it]Train:   4%|▍         | 49/1112 [3:42:06<80:18:20, 271.97s/it]Train:   4%|▍         | 50/1112 [3:46:37<80:09:57, 271.75s/it]                                                              {'loss': 1.06362123, 'grad_norm': 2.98910046, 'learning_rate': 1.607e-05, 'token_acc': 0.73001652, 'epoch': 0.04, 'global_step/max_steps': '50/1112', 'elapsed_time': '3h 46m 37s', 'remaining_time': '3d 8h 13m 30s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 271.949086}
+Train:   4%|▍         | 50/1112 [3:46:37<80:09:57, 271.75s/it]Train:   4%|▍         | 50/1112 [3:46:37<80:09:57, 271.75s/it]Train:   5%|▍         | 51/1112 [3:51:08<80:03:43, 271.65s/it]Train:   5%|▍         | 52/1112 [3:55:40<80:00:46, 271.74s/it]Train:   5%|▍         | 53/1112 [4:00:12<79:54:57, 271.67s/it]Train:   5%|▍         | 54/1112 [4:04:44<79:53:02, 271.82s/it]Train:   5%|▍         | 55/1112 [4:09:15<79:46:26, 271.70s/it]                                                              {'loss': 1.00927868, 'grad_norm': 6.73624849, 'learning_rate': 1.786e-05, 'token_acc': 0.73964849, 'epoch': 0.05, 'global_step/max_steps': '55/1112', 'elapsed_time': '4h 9m 16s', 'remaining_time': '3d 7h 50m 26s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 271.925829}
+Train:   5%|▍         | 55/1112 [4:09:15<79:46:26, 271.70s/it]Train:   5%|▍         | 55/1112 [4:09:15<79:46:26, 271.70s/it]Train:   5%|▌         | 56/1112 [4:13:47<79:43:30, 271.79s/it]Train:   5%|▌         | 57/1112 [4:18:19<79:39:49, 271.84s/it]Train:   5%|▌         | 58/1112 [4:22:52<79:37:25, 271.96s/it]Train:   5%|▌         | 59/1112 [4:27:24<79:32:59, 271.97s/it]Train:   5%|▌         | 60/1112 [4:31:56<79:29:02, 272.00s/it]                                                              {'loss': 1.00475903, 'grad_norm': 3.56188202, 'learning_rate': 1.964e-05, 'token_acc': 0.73880552, 'epoch': 0.05, 'global_step/max_steps': '60/1112', 'elapsed_time': '4h 31m 56s', 'remaining_time': '3d 7h 27m 57s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 271.936179}
+Train:   5%|▌         | 60/1112 [4:31:56<79:29:02, 272.00s/it]Train:   5%|▌         | 60/1112 [4:31:56<79:29:02, 272.00s/it]Train:   5%|▌         | 61/1112 [4:36:28<79:23:42, 271.95s/it]Train:   6%|▌         | 62/1112 [4:41:00<79:19:21, 271.96s/it]Train:   6%|▌         | 63/1112 [4:45:31<79:10:34, 271.72s/it]Train:   6%|▌         | 64/1112 [4:50:01<78:59:18, 271.33s/it]Train:   6%|▌         | 65/1112 [4:54:33<78:56:47, 271.45s/it]                                                              {'loss': 1.00087357, 'grad_norm': 5.1408391, 'learning_rate': 2e-05, 'token_acc': 0.73846962, 'epoch': 0.06, 'global_step/max_steps': '65/1112', 'elapsed_time': '4h 54m 33s', 'remaining_time': '3d 7h 4m 36s', 'memory(GiB)': 29.56, 'train_speed(s/it)': 271.897043}
+Train:   6%|▌         | 65/1112 [4:54:33<78:56:47, 271.45s/it]Train:   6%|▌         | 65/1112 [4:54:33<78:56:47, 271.45s/it]Train:   6%|▌         | 66/1112 [4:59:04<78:51:08, 271.38s/it]Train:   6%|▌         | 67/1112 [5:03:36<78:47:54, 271.46s/it]Train:   6%|▌         | 68/1112 [5:08:08<78:45:33, 271.58s/it]Train:   6%|▌         | 69/1112 [5:12:39<78:42:04, 271.64s/it]train.sh: line 70: 44260 Killed                  CUDA_VISIBLE_DEVICES=0,1,2,3 NPROC_PER_NODE=4 swift sft --model "${MODELS[$i]}" --tuner_type full --dataset "${SRC_DATASET}" --torch_dtype float16 --num_train_epochs 1 --per_device_train_batch_size 1 --learning_rate 2e-5 --gradient_accumulation_steps 32 --save_total_limit 3 --deepspeed zero2 --logging_steps 5 --save_only_model true --output_dir "${OUTPUTS[$i]}" --warmup_ratio 0.05 --dataset_num_proc 64

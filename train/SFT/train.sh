@@ -9,15 +9,15 @@ mkdir -p "${LOCAL_DATA_DIR}"
 # 实验列表配置
 ############################
 MODELS=(
-    "Qwen/Qwen3-1.7B-base"
+    "Qwen/Qwen3-1.7B"
 )
 
 DATASETS=(
-  "/root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Reranker-SFT.jsonl"
+  "/root/dengjie/AI4SCI/PP-data/GSE92742-SFT/Mixed-Planner-Reranker-SFT.jsonl#20000"
 )
 
 OUTPUTS=(
-    "/root/dengjie/AI4SCI/Model-Saves/Qwen3-1.7B-SFT-Reranker-Full"
+    "/root/dengjie/AI4SCI/Model-Saves/Qwen3-1.7B-SFT-Mixed-20k"
 )
 
 ############################
@@ -49,15 +49,15 @@ for ((i=0; i<NUM_EXP; i++)); do
   NPROC_PER_NODE=4 \
   swift sft \
       --model "${MODELS[$i]}" \
-      --tuner_type lora \
+      --tuner_type full \
       --dataset "${SRC_DATASET}" \
       --torch_dtype float16 \
       --num_train_epochs 1 \
       --per_device_train_batch_size 1 \
       --learning_rate 2e-5 \
-      --gradient_accumulation_steps 16 \
+      --gradient_accumulation_steps 32 \
       --save_total_limit 3 \
-      --deepspeed zero3 \
+      --deepspeed zero2 \
       --logging_steps 5 \
       --save_only_model true \
       --output_dir "${OUTPUTS[$i]}" \
