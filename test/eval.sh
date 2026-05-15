@@ -58,19 +58,12 @@ python swift-two-stage-infer.py \
   --planner-max-new-tokens 8192 \
   --reranker-max-new-tokens 8192
 
-
 python eval_tools.py \
   --test-data /root/dengjie/AI4SCI/PP-data/GSE92742-TEST/test_id.jsonl \
   --result-jsonl /root/dengjie/AI4SCI/runs/id_runs/qwen3_two_stage_e2e_rerank_only/e2e_result.jsonl \
-  --true-field perturb_sentence \
-  --pred-field reranker_output \
-  --sequence-mode rank_vector \
-  --vocab-from true \
-  --backend torch \
+  --model-dir /root/dengjie/AI4SCI/Model-Saves/scGPT \
+  --out /root/dengjie/AI4SCI/runs/id_runs/qwen3_two_stage_e2e_rerank_only/scgpt_metrics.json \
   --device cuda \
-  --dtype float32 \
-  --max-samples 5000 \
-  --mmd-chunk-size 1024 \
-  --n-projections 256 \
-  --out /root/dengjie/AI4SCI/runs/id_runs/qwen3_two_stage_e2e_rerank_only/dist_metrics.json \
-  --save-arrays-prefix /root/dengjie/AI4SCI/runs/id_runs/qwen3_two_stage_e2e_rerank_only/rank_vectors
+  --batch-size 32 \
+  --max-length 1200 \
+  --save-emb-prefix /root/dengjie/AI4SCI/PerturbR/test/id_runs/qwen3_two_stage_e2e_rerank_only/scgpt_emb
